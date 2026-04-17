@@ -107,22 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startTimer();
   }
 
-  // ── Hero Background Slideshow ────────────────────────────
-  const heroSlides = document.querySelectorAll('.hero-slide');
-  if (heroSlides.length > 1) {
-    let currentHeroSlide = 0;
-    setInterval(() => {
-      heroSlides[currentHeroSlide].classList.remove('active');
-      currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
-      const next = heroSlides[currentHeroSlide];
-      // Reset zoom animation by re-triggering it
-      next.style.animation = 'none';
-      next.offsetHeight; // reflow
-      next.style.animation = '';
-      next.classList.add('active');
-    }, 6000);
-  }
-
   // ── Active Nav Link ──────────────────────────────────────
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(link => {
