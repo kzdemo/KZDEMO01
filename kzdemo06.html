@@ -1,1569 +1,1562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Koning Zollar LLP — Strategic. Experienced. Focused.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
-  <style>
-    /* ─── Reset & Base ─────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Koning Zollar LLP — Strategic. Experienced. Focused.</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+ <style>
+ /* ─── Reset & Base ─────────────────────────────────────────────────── */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --navy:       #0B1426;
-      --navy-mid:   #111d35;
-      --navy-light: #1a2947;
-      --blue:       #3B82F6;
-      --blue-light: #60A5FA;
-      --blue-dark:  #2563EB;
-      --white:      #FFFFFF;
-      --gray-100:   #F1F5F9;
-      --gray-300:   #CBD5E1;
-      --gray-400:   #94A3B8;
-      --gray-600:   #475569;
-      --text:       #E2E8F0;
-      --text-muted: #94A3B8;
-      --border:     rgba(255,255,255,0.08);
-      --nav-h:      72px;
-      --max-w:      1200px;
-      --transition: 0.3s ease;
-    }
+ :root {
+ --navy: #0B1426;
+ --navy-mid: #111d35;
+ --navy-light: #1a2947;
+ --blue: #3B82F6;
+ --blue-light: #60A5FA;
+ --blue-dark: #2563EB;
+ --white: #FFFFFF;
+ --gray-100: #F1F5F9;
+ --gray-300: #CBD5E1;
+ --gray-400: #94A3B8;
+ --gray-600: #475569;
+ --text: #E2E8F0;
+ --text-muted: #94A3B8;
+ --border: rgba(255,255,255,0.08);
+ --nav-h: 72px;
+ --max-w: 1200px;
+ --transition: 0.3s ease;
+ }
 
-    html { scroll-behavior: smooth; }
+ html { scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text);
-      background: var(--navy);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
+ body {
+ font-family: 'Inter', sans-serif;
+ color: var(--text);
+ background: var(--navy);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
 
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    .serif { font-family: 'Playfair Display', serif; }
+ a { text-decoration: none; color: inherit; }
+ img { display: block; max-width: 100%; }
+ .serif { font-family: 'Playfair Display', serif; }
 
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 clamp(20px, 5vw, 48px);
-    }
+ .container {
+ max-width: var(--max-w);
+ margin: 0 auto;
+ padding: 0 clamp(20px, 5vw, 48px);
+ }
 
-    .section-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 0.75rem;
-    }
+ .section-label {
+ font-size: 0.7rem;
+ font-weight: 600;
+ letter-spacing: 0.2em;
+ text-transform: uppercase;
+ color: var(--blue);
+ margin-bottom: 0.75rem;
+ }
 
-    /* ─── Reveal animations ────────────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    .reveal-delay-5 { transition-delay: 0.5s; }
-    .reveal-delay-6 { transition-delay: 0.6s; }
-    .reveal-delay-7 { transition-delay: 0.7s; }
+ /* ─── Reveal animations ────────────────────────────────────────────── */
+ .reveal {
+ opacity: 0;
+ transform: translateY(28px);
+ transition: opacity 0.65s ease, transform 0.65s ease;
+ }
+ .reveal.visible { opacity: 1; transform: none; }
+ .reveal-delay-1 { transition-delay: 0.1s; }
+ .reveal-delay-2 { transition-delay: 0.2s; }
+ .reveal-delay-3 { transition-delay: 0.3s; }
+ .reveal-delay-4 { transition-delay: 0.4s; }
+ .reveal-delay-5 { transition-delay: 0.5s; }
+ .reveal-delay-6 { transition-delay: 0.6s; }
+ .reveal-delay-7 { transition-delay: 0.7s; }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       NAVIGATION
-    ═══════════════════════════════════════════════════════════════════ */
-    #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: var(--nav-h);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      padding: 0 clamp(20px, 5vw, 48px);
-      transition: background var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
-    }
-    #navbar.scrolled {
-      background: rgba(11, 20, 38, 0.95);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 1px 0 var(--border);
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ NAVIGATION
+ ═══════════════════════════════════════════════════════════════════ */
+ #navbar {
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ height: var(--nav-h);
+ z-index: 1000;
+ display: flex;
+ align-items: center;
+ padding: 0 clamp(20px, 5vw, 48px);
+ transition: background var(--transition), box-shadow var(--transition), backdrop-filter var(--transition);
+ }
+ #navbar.scrolled {
+ background: rgba(11, 20, 38, 0.95);
+ backdrop-filter: blur(12px);
+ box-shadow: 0 1px 0 var(--border);
+ }
 
-    .nav-inner {
-      width: 100%;
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+ .nav-inner {
+ width: 100%;
+ max-width: var(--max-w);
+ margin: 0 auto;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ }
 
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .nav-logo-mark {
-      width: 36px;
-      height: 36px;
-      background: var(--blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-    }
-    .nav-logo-kz {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0.02em;
-    }
-    .nav-logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .nav-logo-name {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      line-height: 1.1;
-    }
-    .nav-logo-sub {
-      font-size: 0.65rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+ .nav-logo {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+ .nav-logo-mark {
+ width: 36px;
+ height: 36px;
+ background: var(--blue);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 4px;
+ }
+ .nav-logo-kz {
+ font-family: 'Playfair Display', serif;
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--white);
+ letter-spacing: 0.02em;
+ }
+ .nav-logo-text {
+ display: flex;
+ flex-direction: column;
+ }
+ .nav-logo-name {
+ font-size: 0.82rem;
+ font-weight: 600;
+ color: var(--white);
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ line-height: 1.1;
+ }
+ .nav-logo-sub {
+ font-size: 0.65rem;
+ font-weight: 400;
+ color: var(--text-muted);
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ }
 
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--gray-300);
-      transition: color var(--transition);
-    }
-    .nav-links a:hover { color: var(--white); }
+ .nav-links {
+ display: flex;
+ gap: 36px;
+ list-style: none;
+ }
+ .nav-links a {
+ font-size: 0.8rem;
+ font-weight: 500;
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ color: var(--gray-300);
+ transition: color var(--transition);
+ }
+ .nav-links a:hover { color: var(--white); }
 
-    .nav-cta {
-      background: var(--blue);
-      color: var(--white);
-      padding: 9px 20px;
-      border-radius: 4px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: background var(--transition), transform var(--transition);
-    }
-    .nav-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
+ .nav-cta {
+ background: var(--blue);
+ color: var(--white);
+ padding: 9px 20px;
+ border-radius: 4px;
+ font-size: 0.78rem;
+ font-weight: 600;
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ transition: background var(--transition), transform var(--transition);
+ }
+ .nav-cta:hover { background: var(--blue-dark); transform: translateY(-1px); }
 
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 1px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ .nav-hamburger {
+ display: none;
+ flex-direction: column;
+ gap: 5px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 4px;
+ }
+ .nav-hamburger span {
+ display: block;
+ width: 24px;
+ height: 2px;
+ background: var(--white);
+ border-radius: 1px;
+ transition: transform 0.3s ease, opacity 0.3s ease;
+ }
+ .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+ .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+ .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    .nav-mobile {
-      display: none;
-      position: fixed;
-      top: var(--nav-h);
-      left: 0; right: 0;
-      background: rgba(11, 20, 38, 0.98);
-      backdrop-filter: blur(16px);
-      border-top: 1px solid var(--border);
-      padding: 24px clamp(20px, 5vw, 48px) 32px;
-      z-index: 999;
-    }
-    .nav-mobile.open { display: block; }
-    .nav-mobile ul { list-style: none; }
-    .nav-mobile ul li { border-bottom: 1px solid var(--border); }
-    .nav-mobile ul li a {
-      display: block;
-      padding: 14px 0;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .nav-mobile .nav-cta-mobile {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--blue);
-      color: var(--white);
-      padding: 12px 28px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
+ .nav-mobile {
+ display: none;
+ position: fixed;
+ top: var(--nav-h);
+ left: 0; right: 0;
+ background: rgba(11, 20, 38, 0.98);
+ backdrop-filter: blur(16px);
+ border-top: 1px solid var(--border);
+ padding: 24px clamp(20px, 5vw, 48px) 32px;
+ z-index: 999;
+ }
+ .nav-mobile.open { display: block; }
+ .nav-mobile ul { list-style: none; }
+ .nav-mobile ul li { border-bottom: 1px solid var(--border); }
+ .nav-mobile ul li a {
+ display: block;
+ padding: 14px 0;
+ font-size: 0.9rem;
+ font-weight: 500;
+ color: var(--text);
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ }
+ .nav-mobile .nav-cta-mobile {
+ display: inline-block;
+ margin-top: 20px;
+ background: var(--blue);
+ color: var(--white);
+ padding: 12px 28px;
+ border-radius: 4px;
+ font-size: 0.82rem;
+ font-weight: 600;
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       HERO
-    ═══════════════════════════════════════════════════════════════════ */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background-image: url('banners/shutterstock_1499306735.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(11, 20, 38, 0.65);
-      z-index: 1;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 200px;
-      background: linear-gradient(to bottom, transparent, var(--navy));
-      z-index: 1;
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ HERO
+ ═══════════════════════════════════════════════════════════════════ */
+ #hero {
+ position: relative;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ background-image: url('banners/shutterstock_1499306735.jpg');
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+ }
+ #hero::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: rgba(11, 20, 38, 0.65);
+ z-index: 1;
+ }
+ #hero::after {
+ content: '';
+ position: absolute;
+ bottom: 0; left: 0; right: 0;
+ height: 200px;
+ background: linear-gradient(to bottom, transparent, var(--navy));
+ z-index: 1;
+ }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-    }
+ .hero-content {
+ position: relative;
+ z-index: 2;
+ width: 100%;
+ }
 
-    .hero-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 clamp(20px, 5vw, 48px);
-      padding-top: var(--nav-h);
-    }
+ .hero-inner {
+ max-width: var(--max-w);
+ margin: 0 auto;
+ padding: 0 clamp(20px, 5vw, 48px);
+ padding-top: var(--nav-h);
+ }
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--blue-light);
-      margin-bottom: 28px;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 1.5px;
-      background: var(--blue-light);
-    }
+ .hero-eyebrow {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 0.72rem;
+ font-weight: 600;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--blue-light);
+ margin-bottom: 28px;
+ }
+ .hero-eyebrow::before {
+ content: '';
+ display: block;
+ width: 28px;
+ height: 1.5px;
+ background: var(--blue-light);
+ }
 
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 24px;
-      max-width: 800px;
-    }
-    .hero-title span {
-      color: var(--blue-light);
-      font-style: italic;
-    }
+ .hero-title {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(2.8rem, 7vw, 5.5rem);
+ font-weight: 700;
+ line-height: 1.05;
+ color: var(--white);
+ margin-bottom: 24px;
+ max-width: 800px;
+ }
+ .hero-title span {
+ color: var(--blue-light);
+ font-style: italic;
+ }
 
-    .hero-tagline {
-      font-size: clamp(1rem, 2vw, 1.35rem);
-      font-weight: 300;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.06em;
-      margin-bottom: 20px;
-    }
+ .hero-tagline {
+ font-size: clamp(1rem, 2vw, 1.35rem);
+ font-weight: 300;
+ color: rgba(255,255,255,0.75);
+ letter-spacing: 0.06em;
+ margin-bottom: 20px;
+ }
 
-    .hero-subtitle {
-      max-width: 540px;
-      font-size: clamp(0.88rem, 1.2vw, 1rem);
-      font-weight: 300;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.65);
-      margin-bottom: 48px;
-    }
+ .hero-subtitle {
+ max-width: 540px;
+ font-size: clamp(0.88rem, 1.2vw, 1rem);
+ font-weight: 300;
+ line-height: 1.75;
+ color: rgba(255,255,255,0.65);
+ margin-bottom: 48px;
+ }
 
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+ .hero-actions {
+ display: flex;
+ gap: 16px;
+ flex-wrap: wrap;
+ }
 
-    .btn-primary {
-      display: inline-block;
-      background: var(--blue);
-      color: var(--white);
-      padding: 14px 32px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-    .btn-primary:hover {
-      background: var(--blue-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
-    }
+ .btn-primary {
+ display: inline-block;
+ background: var(--blue);
+ color: var(--white);
+ padding: 14px 32px;
+ border-radius: 4px;
+ font-size: 0.82rem;
+ font-weight: 600;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+ }
+ .btn-primary:hover {
+ background: var(--blue-dark);
+ transform: translateY(-2px);
+ box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+ }
 
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: var(--white);
-      padding: 14px 32px;
-      border-radius: 4px;
-      border: 1.5px solid rgba(255,255,255,0.35);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: border-color var(--transition), background var(--transition), transform var(--transition);
-    }
-    .btn-secondary:hover {
-      border-color: var(--white);
-      background: rgba(255,255,255,0.06);
-      transform: translateY(-2px);
-    }
+ .btn-secondary {
+ display: inline-block;
+ background: transparent;
+ color: var(--white);
+ padding: 14px 32px;
+ border-radius: 4px;
+ border: 1.5px solid rgba(255,255,255,0.35);
+ font-size: 0.82rem;
+ font-weight: 600;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ transition: border-color var(--transition), background var(--transition), transform var(--transition);
+ }
+ .btn-secondary:hover {
+ border-color: var(--white);
+ background: rgba(255,255,255,0.06);
+ transform: translateY(-2px);
+ }
 
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 48px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      color: rgba(255,255,255,0.45);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
-      animation: scrollLine 1.8s ease-in-out infinite;
-    }
-    @keyframes scrollLine {
-      0%, 100% { opacity: 0.5; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.2); }
-    }
+ .hero-scroll-hint {
+ position: absolute;
+ bottom: 48px;
+ left: 50%;
+ transform: translateX(-50%);
+ z-index: 2;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 8px;
+ color: rgba(255,255,255,0.45);
+ font-size: 0.65rem;
+ font-weight: 500;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ }
+ .scroll-line {
+ width: 1px;
+ height: 40px;
+ background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
+ animation: scrollLine 1.8s ease-in-out infinite;
+ }
+ @keyframes scrollLine {
+ 0%, 100% { opacity: 0.5; transform: scaleY(1); }
+ 50% { opacity: 1; transform: scaleY(1.2); }
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       STATS BAR
-    ═══════════════════════════════════════════════════════════════════ */
-    #stats {
-      background: var(--blue-dark);
-      padding: 40px 0;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-    .stat-item {
-      text-align: center;
-      padding: 16px 24px;
-      position: relative;
-    }
-    .stat-item + .stat-item::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 20%; bottom: 20%;
-      width: 1px;
-      background: rgba(255,255,255,0.2);
-    }
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ STATS BAR
+ ═══════════════════════════════════════════════════════════════════ */
+ #stats {
+ background: var(--blue-dark);
+ padding: 40px 0;
+ }
+ .stats-grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 0;
+ }
+ .stat-item {
+ text-align: center;
+ padding: 16px 24px;
+ position: relative;
+ }
+ .stat-item + .stat-item::before {
+ content: '';
+ position: absolute;
+ left: 0; top: 20%; bottom: 20%;
+ width: 1px;
+ background: rgba(255,255,255,0.2);
+ }
+ .stat-number {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(2rem, 4vw, 3rem);
+ font-weight: 700;
+ color: var(--white);
+ line-height: 1;
+ margin-bottom: 6px;
+ }
+ .stat-label {
+ font-size: 0.72rem;
+ font-weight: 500;
+ letter-spacing: 0.14em;
+ text-transform: uppercase;
+ color: rgba(255,255,255,0.7);
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       ABOUT
-    ═══════════════════════════════════════════════════════════════════ */
-    #about {
-      background: var(--navy-mid);
-      padding: clamp(80px, 12vh, 120px) 0;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 8vw, 100px);
-      align-items: center;
-    }
-    .about-left h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 24px;
-    }
-    .about-left h2 em {
-      color: var(--blue-light);
-      font-style: italic;
-    }
-    .about-left p {
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    .about-left p:last-of-type { margin-bottom: 36px; }
-    .about-offices {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-    .office-badge {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--blue-light);
-      letter-spacing: 0.04em;
-    }
-    .office-badge::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--blue);
-    }
-    .about-right {
-      position: relative;
-    }
-    .about-feature-card {
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 36px;
-    }
-    .about-feature-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .about-feature-card p {
-      font-size: 0.9rem;
-      font-weight: 300;
-      line-height: 1.75;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-    .feature-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .feature-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.88rem;
-      color: var(--text);
-    }
-    .feature-list li::before {
-      content: '→';
-      color: var(--blue);
-      font-size: 0.8rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ ABOUT
+ ═══════════════════════════════════════════════════════════════════ */
+ #about {
+ background: var(--navy-mid);
+ padding: clamp(80px, 12vh, 120px) 0;
+ }
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: clamp(40px, 8vw, 100px);
+ align-items: center;
+ }
+ .about-left h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(2rem, 4vw, 3rem);
+ font-weight: 700;
+ color: var(--white);
+ line-height: 1.15;
+ margin-bottom: 24px;
+ }
+ .about-left h2 em {
+ color: var(--blue-light);
+ font-style: italic;
+ }
+ .about-left p {
+ font-size: 1rem;
+ font-weight: 300;
+ line-height: 1.8;
+ color: var(--text-muted);
+ margin-bottom: 20px;
+ }
+ .about-left p:last-of-type { margin-bottom: 36px; }
+ .about-offices {
+ display: flex;
+ gap: 32px;
+ flex-wrap: wrap;
+ }
+ .office-badge {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ font-size: 0.82rem;
+ font-weight: 500;
+ color: var(--blue-light);
+ letter-spacing: 0.04em;
+ }
+ .office-badge::before {
+ content: '';
+ display: block;
+ width: 6px;
+ height: 6px;
+ border-radius: 50%;
+ background: var(--blue);
+ }
+ .about-right {
+ position: relative;
+ }
+ .about-feature-card {
+ background: var(--navy-light);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 36px;
+ }
+ .about-feature-card h3 {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.3rem;
+ color: var(--white);
+ margin-bottom: 16px;
+ }
+ .about-feature-card p {
+ font-size: 0.9rem;
+ font-weight: 300;
+ line-height: 1.75;
+ color: var(--text-muted);
+ margin-bottom: 24px;
+ }
+ .feature-list {
+ list-style: none;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ }
+ .feature-list li {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ font-size: 0.88rem;
+ color: var(--text);
+ }
+ .feature-list li::before {
+ content: '→';
+ color: var(--blue);
+ font-size: 0.8rem;
+ margin-top: 2px;
+ flex-shrink: 0;
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       PRACTICE AREAS
-    ═══════════════════════════════════════════════════════════════════ */
-    #practice {
-      background: var(--navy);
-      padding: clamp(80px, 12vh, 120px) 0;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: clamp(48px, 8vh, 72px);
-    }
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .section-header p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
-    .section-divider {
-      width: 48px;
-      height: 2px;
-      background: var(--blue);
-      margin: 20px auto 0;
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ PRACTICE AREAS
+ ═══════════════════════════════════════════════════════════════════ */
+ #practice {
+ background: var(--navy);
+ padding: clamp(80px, 12vh, 120px) 0;
+ }
+ .section-header {
+ text-align: center;
+ margin-bottom: clamp(48px, 8vh, 72px);
+ }
+ .section-header h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+ font-weight: 700;
+ color: var(--white);
+ margin-bottom: 16px;
+ }
+ .section-header p {
+ font-size: 1rem;
+ font-weight: 300;
+ color: var(--text-muted);
+ max-width: 560px;
+ margin: 0 auto;
+ line-height: 1.7;
+ }
+ .section-divider {
+ width: 48px;
+ height: 2px;
+ background: var(--blue);
+ margin: 20px auto 0;
+ }
 
-    .practice-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .practice-card {
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 36px 32px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
-      cursor: default;
-    }
-    .practice-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 3px;
-      height: 100%;
-      background: var(--blue);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform var(--transition);
-    }
-    .practice-card:hover {
-      border-color: rgba(59, 130, 246, 0.3);
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.3);
-    }
-    .practice-card:hover::before { transform: scaleY(1); }
-    .practice-card:nth-child(4),
-    .practice-card:nth-child(5) {
-      grid-column: span 1;
-    }
-    /* Center last 2 cards when in 3-col */
-    .practice-grid-inner {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .practice-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(59, 130, 246, 0.12);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .practice-icon svg {
-      width: 22px;
-      height: 22px;
-      stroke: var(--blue);
-      fill: none;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .practice-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-    .practice-card p {
-      font-size: 0.88rem;
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--text-muted);
-    }
+ .practice-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ }
+ .practice-card {
+ background: var(--navy-light);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 36px 32px;
+ position: relative;
+ overflow: hidden;
+ transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+ cursor: default;
+ }
+ .practice-card::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0;
+ width: 3px;
+ height: 100%;
+ background: var(--blue);
+ transform: scaleY(0);
+ transform-origin: bottom;
+ transition: transform var(--transition);
+ }
+ .practice-card:hover {
+ border-color: rgba(59, 130, 246, 0.3);
+ transform: translateY(-4px);
+ box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+ }
+ .practice-card:hover::before { transform: scaleY(1); }
+ .practice-card:nth-child(4).practice-card:nth-child(5) {
+ grid-column: span 1;
+ }
+ /* Center last 2 cards when in 3-col */
+ .practice-grid-inner {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 20px;
+ }
+ .practice-icon {
+ width: 44px;
+ height: 44px;
+ background: rgba(59, 130, 246, 0.12);
+ border-radius: 8px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 20px;
+ }
+ .practice-icon svg {
+ width: 22px;
+ height: 22px;
+ stroke: var(--blue);
+ fill: none;
+ stroke-width: 1.5;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ }
+ .practice-card h3 {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.15rem;
+ font-weight: 700;
+ color: var(--white);
+ margin-bottom: 12px;
+ }
+ .practice-card p {
+ font-size: 0.88rem;
+ font-weight: 300;
+ line-height: 1.7;
+ color: var(--text-muted);
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       TEAM
-    ═══════════════════════════════════════════════════════════════════ */
-    #team {
-      background: var(--navy-mid);
-      padding: clamp(80px, 12vh, 120px) 0;
-    }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-    .team-card {
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-    }
-    .team-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-      border-color: rgba(59, 130, 246, 0.25);
-    }
-    .team-photo {
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-      background: var(--navy-light);
-    }
-    .team-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform 0.4s ease;
-    }
-    .team-card:hover .team-photo img { transform: scale(1.04); }
-    .team-info {
-      padding: 20px 18px;
-    }
-    .team-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .team-role {
-      font-size: 0.74rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue-light);
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ TEAM
+ ═══════════════════════════════════════════════════════════════════ */
+ #team {
+ background: var(--navy-mid);
+ padding: clamp(80px, 12vh, 120px) 0;
+ }
+ .team-grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 24px;
+ }
+ .team-card {
+ background: var(--navy-light);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ overflow: hidden;
+ transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+ }
+ .team-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+ border-color: rgba(59, 130, 246, 0.25);
+ }
+ .team-photo {
+ aspect-ratio: 3 / 4;
+ overflow: hidden;
+ background: var(--navy-light);
+ }
+ .team-photo img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: top center;
+ transition: transform 0.4s ease;
+ }
+ .team-card:hover .team-photo img { transform: scale(1.04); }
+ .team-info {
+ padding: 20px 18px;
+ }
+ .team-name {
+ font-family: 'Playfair Display', serif;
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--white);
+ margin-bottom: 4px;
+ }
+ .team-role {
+ font-size: 0.74rem;
+ font-weight: 500;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: var(--blue-light);
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       TESTIMONIALS
-    ═══════════════════════════════════════════════════════════════════ */
-    #testimonials {
-      background: var(--navy);
-      padding: clamp(80px, 12vh, 120px) 0;
-    }
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .testimonial-card {
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 36px 32px;
-      position: relative;
-    }
-    .testimonial-card::before {
-      content: '\201C';
-      position: absolute;
-      top: 20px;
-      right: 28px;
-      font-family: 'Playfair Display', serif;
-      font-size: 5rem;
-      line-height: 1;
-      color: rgba(59, 130, 246, 0.15);
-      pointer-events: none;
-    }
-    .testimonial-text {
-      font-size: 0.95rem;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--text);
-      margin-bottom: 28px;
-      font-style: italic;
-    }
-    .testimonial-author {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-    .author-name {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--white);
-    }
-    .author-title {
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-    }
-    .testimonial-stars {
-      display: flex;
-      gap: 3px;
-      margin-bottom: 20px;
-    }
-    .testimonial-stars svg {
-      width: 14px;
-      height: 14px;
-      fill: var(--blue);
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ TESTIMONIALS
+ ═══════════════════════════════════════════════════════════════════ */
+ #testimonials {
+ background: var(--navy);
+ padding: clamp(80px, 12vh, 120px) 0;
+ }
+ .testimonials-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 24px;
+ }
+ .testimonial-card {
+ background: var(--navy-light);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 36px 32px;
+ position: relative;
+ }
+ .testimonial-card::before {
+ content: '\201C';
+ position: absolute;
+ top: 20px;
+ right: 28px;
+ font-family: 'Playfair Display', serif;
+ font-size: 5rem;
+ line-height: 1;
+ color: rgba(59, 130, 246, 0.15);
+ pointer-events: none;
+ }
+ .testimonial-text {
+ font-size: 0.95rem;
+ font-weight: 300;
+ line-height: 1.8;
+ color: var(--text);
+ margin-bottom: 28px;
+ font-style: italic;
+ }
+ .testimonial-author {
+ display: flex;
+ flex-direction: column;
+ gap: 2px;
+ }
+ .author-name {
+ font-size: 0.85rem;
+ font-weight: 600;
+ color: var(--white);
+ }
+ .author-title {
+ font-size: 0.75rem;
+ font-weight: 400;
+ color: var(--text-muted);
+ letter-spacing: 0.04em;
+ }
+ .testimonial-stars {
+ display: flex;
+ gap: 3px;
+ margin-bottom: 20px;
+ }
+ .testimonial-stars svg {
+ width: 14px;
+ height: 14px;
+ fill: var(--blue);
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       CONTACT
-    ═══════════════════════════════════════════════════════════════════ */
-    #contact {
-      background: var(--navy-mid);
-      padding: clamp(80px, 12vh, 120px) 0;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 8vw, 80px);
-      align-items: start;
-    }
-    .contact-left h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .contact-left p {
-      font-size: 0.95rem;
-      font-weight: 300;
-      line-height: 1.75;
-      color: var(--text-muted);
-      margin-bottom: 40px;
-    }
-    .offices-list {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
-    .office-item h4 {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 8px;
-    }
-    .office-item address {
-      font-style: normal;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--text);
-    }
-    .contact-email {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 28px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--blue-light);
-      transition: color var(--transition);
-    }
-    .contact-email:hover { color: var(--white); }
-    .contact-email svg {
-      width: 16px;
-      height: 16px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ CONTACT
+ ═══════════════════════════════════════════════════════════════════ */
+ #contact {
+ background: var(--navy-mid);
+ padding: clamp(80px, 12vh, 120px) 0;
+ }
+ .contact-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: clamp(40px, 8vw, 80px);
+ align-items: start;
+ }
+ .contact-left h2 {
+ font-family: 'Playfair Display', serif;
+ font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+ font-weight: 700;
+ color: var(--white);
+ margin-bottom: 16px;
+ }
+ .contact-left p {
+ font-size: 0.95rem;
+ font-weight: 300;
+ line-height: 1.75;
+ color: var(--text-muted);
+ margin-bottom: 40px;
+ }
+ .offices-list {
+ display: flex;
+ flex-direction: column;
+ gap: 28px;
+ }
+ .office-item h4 {
+ font-size: 0.72rem;
+ font-weight: 600;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: var(--blue);
+ margin-bottom: 8px;
+ }
+ .office-item address {
+ font-style: normal;
+ font-size: 0.9rem;
+ line-height: 1.6;
+ color: var(--text);
+ }
+ .contact-email {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ margin-top: 28px;
+ font-size: 0.9rem;
+ font-weight: 500;
+ color: var(--blue-light);
+ transition: color var(--transition);
+ }
+ .contact-email:hover { color: var(--white); }
+ .contact-email svg {
+ width: 16px;
+ height: 16px;
+ stroke: currentColor;
+ fill: none;
+ stroke-width: 1.5;
+ }
 
-    .contact-form {
-      background: var(--navy-light);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 36px;
-    }
-    .contact-form h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: var(--white);
-      margin-bottom: 24px;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .form-group {
-      margin-bottom: 16px;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      background: var(--navy);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 11px 14px;
-      font-size: 0.9rem;
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      transition: border-color var(--transition);
-      outline: none;
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--gray-600); }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--blue); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-group select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 36px;
-    }
-    .form-group select option { background: var(--navy-mid); }
-    .form-submit {
-      width: 100%;
-      background: var(--blue);
-      color: var(--white);
-      border: none;
-      padding: 14px 24px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background var(--transition), transform var(--transition);
-      margin-top: 4px;
-    }
-    .form-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
-    .form-privacy {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-align: center;
-      margin-top: 12px;
-      line-height: 1.5;
-    }
+ .contact-form {
+ background: var(--navy-light);
+ border: 1px solid var(--border);
+ border-radius: 8px;
+ padding: 36px;
+ }
+ .contact-form h3 {
+ font-family: 'Playfair Display', serif;
+ font-size: 1.2rem;
+ color: var(--white);
+ margin-bottom: 24px;
+ }
+ .form-row {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 16px;
+ }
+ .form-group {
+ margin-bottom: 16px;
+ }
+ .form-group label {
+ display: block;
+ font-size: 0.72rem;
+ font-weight: 600;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ color: var(--text-muted);
+ margin-bottom: 6px;
+ }
+ .form-group input.form-group select.form-group textarea {
+ width: 100%;
+ background: var(--navy);
+ border: 1px solid var(--border);
+ border-radius: 4px;
+ padding: 11px 14px;
+ font-size: 0.9rem;
+ color: var(--text);
+ font-family: 'Inter', sans-serif;
+ transition: border-color var(--transition);
+ outline: none;
+ }
+ .form-group input::placeholder.form-group textarea::placeholder { color: var(--gray-600); }
+ .form-group input:focus.form-group select:focus.form-group textarea:focus { border-color: var(--blue); }
+ .form-group textarea { resize: vertical; min-height: 120px; }
+ .form-group select {
+ appearance: none;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-position: right 14px center;
+ padding-right: 36px;
+ }
+ .form-group select option { background: var(--navy-mid); }
+ .form-submit {
+ width: 100%;
+ background: var(--blue);
+ color: var(--white);
+ border: none;
+ padding: 14px 24px;
+ border-radius: 4px;
+ font-size: 0.82rem;
+ font-weight: 600;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ cursor: pointer;
+ transition: background var(--transition), transform var(--transition);
+ margin-top: 4px;
+ }
+ .form-submit:hover { background: var(--blue-dark); transform: translateY(-1px); }
+ .form-privacy {
+ font-size: 0.72rem;
+ color: var(--text-muted);
+ text-align: center;
+ margin-top: 12px;
+ line-height: 1.5;
+ }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       FOOTER
-    ═══════════════════════════════════════════════════════════════════ */
-    #footer {
-      background: #07101e;
-      border-top: 1px solid var(--border);
-      padding: 60px 0 32px;
-    }
-    .footer-inner {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-    .footer-brand .nav-logo { margin-bottom: 20px; }
-    .footer-brand p {
-      font-size: 0.85rem;
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    .footer-col h4 {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 20px;
-    }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a {
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .footer-col ul li a:hover { color: var(--white); }
-    .footer-bottom {
-      padding-top: 28px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .footer-bottom p {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-    .footer-legal {
-      display: flex;
-      gap: 24px;
-    }
-    .footer-legal a {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      transition: color var(--transition);
-    }
-    .footer-legal a:hover { color: var(--white); }
+ /* ═══════════════════════════════════════════════════════════════════
+ FOOTER
+ ═══════════════════════════════════════════════════════════════════ */
+ #footer {
+ background: #07101e;
+ border-top: 1px solid var(--border);
+ padding: 60px 0 32px;
+ }
+ .footer-inner {
+ display: grid;
+ grid-template-columns: 1.5fr 1fr 1fr 1fr;
+ gap: 48px;
+ margin-bottom: 48px;
+ }
+ .footer-brand .nav-logo { margin-bottom: 20px; }
+ .footer-brand p {
+ font-size: 0.85rem;
+ font-weight: 300;
+ line-height: 1.7;
+ color: var(--text-muted);
+ margin-bottom: 20px;
+ }
+ .footer-col h4 {
+ font-size: 0.7rem;
+ font-weight: 700;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: var(--blue);
+ margin-bottom: 20px;
+ }
+ .footer-col ul { list-style: none; }
+ .footer-col ul li { margin-bottom: 10px; }
+ .footer-col ul li a {
+ font-size: 0.85rem;
+ font-weight: 300;
+ color: var(--text-muted);
+ transition: color var(--transition);
+ }
+ .footer-col ul li a:hover { color: var(--white); }
+ .footer-bottom {
+ padding-top: 28px;
+ border-top: 1px solid var(--border);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 16px;
+ }
+ .footer-bottom p {
+ font-size: 0.78rem;
+ color: var(--text-muted);
+ }
+ .footer-legal {
+ display: flex;
+ gap: 24px;
+ }
+ .footer-legal a {
+ font-size: 0.78rem;
+ color: var(--text-muted);
+ transition: color var(--transition);
+ }
+ .footer-legal a:hover { color: var(--white); }
 
-    /* ═══════════════════════════════════════════════════════════════════
-       RESPONSIVE
-    ═══════════════════════════════════════════════════════════════════ */
-    @media (max-width: 1024px) {
-      .team-grid { grid-template-columns: repeat(4, 1fr); }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
+ /* ═══════════════════════════════════════════════════════════════════
+ RESPONSIVE
+ ═══════════════════════════════════════════════════════════════════ */
+ @media (max-width: 1024px) {
+ .team-grid { grid-template-columns: repeat(4, 1fr); }
+ .footer-inner { grid-template-columns: 1fr 1fr; }
+ }
 
-    @media (max-width: 900px) {
-      .practice-grid { grid-template-columns: repeat(2, 1fr); }
-      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+ @media (max-width: 900px) {
+ .practice-grid { grid-template-columns: repeat(2, 1fr); }
+ .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+ }
 
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .nav-hamburger { display: flex; }
+ @media (max-width: 768px) {
+ .nav-links.nav-cta { display: none; }
+ .nav-hamburger { display: flex; }
 
-      .about-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
-      #hero { background-attachment: scroll; }
-    }
+ .about-grid { grid-template-columns: 1fr; }
+ .contact-grid { grid-template-columns: 1fr; }
+ .stats-grid { grid-template-columns: repeat(2, 1fr); }
+ .team-grid { grid-template-columns: repeat(2, 1fr); }
+ .form-row { grid-template-columns: 1fr; }
+ .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+ #hero { background-attachment: scroll; }
+ }
 
-    @media (max-width: 540px) {
-      .practice-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .footer-inner { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-  </style>
+ @media (max-width: 540px) {
+ .practice-grid { grid-template-columns: 1fr; }
+ .testimonials-grid { grid-template-columns: 1fr; }
+ .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+ .footer-inner { grid-template-columns: 1fr; }
+ .footer-bottom { flex-direction: column; text-align: center; }
+ .stats-grid { grid-template-columns: repeat(2, 1fr); }
+ }
+ </style>
 </head>
 <body>
 
 <!-- ═══ NAV ═══════════════════════════════════════════════════════════ -->
 <nav id="navbar">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">
-      <div class="nav-logo-mark">
-        <span class="nav-logo-kz">KZ</span>
-      </div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-name">Koning Zollar</span>
-        <span class="nav-logo-sub">LLP · Attorneys at Law</span>
-      </div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#practice">Practice</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#testimonials">Results</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Contact Us</a>
-    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+ <div class="nav-inner">
+ <a href="#hero" class="nav-logo">
+ <div class="nav-logo-mark">
+ <span class="nav-logo-kz">KZ</span>
+ </div>
+ <div class="nav-logo-text">
+ <span class="nav-logo-name">Koning Zollar</span>
+ <span class="nav-logo-sub">LLP · Attorneys at Law</span>
+ </div>
+ </a>
+ <ul class="nav-links">
+ <li><a href="#about">About</a></li>
+ <li><a href="#practice">Practice</a></li>
+ <li><a href="#team">Team</a></li>
+ <li><a href="#testimonials">Results</a></li>
+ </ul>
+ <a href="#contact" class="nav-cta">Contact Us</a>
+ <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
 </nav>
 
 <div class="nav-mobile" id="nav-mobile">
-  <ul>
-    <li><a href="#about" onclick="closeMobile()">About</a></li>
-    <li><a href="#practice" onclick="closeMobile()">Practice Areas</a></li>
-    <li><a href="#team" onclick="closeMobile()">Our Team</a></li>
-    <li><a href="#testimonials" onclick="closeMobile()">Results</a></li>
-    <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta-mobile" onclick="closeMobile()">Get in Touch</a>
+ <ul>
+ <li><a href="#about" onclick="closeMobile()">About</a></li>
+ <li><a href="#practice" onclick="closeMobile()">Practice Areas</a></li>
+ <li><a href="#team" onclick="closeMobile()">Our Team</a></li>
+ <li><a href="#testimonials" onclick="closeMobile()">Results</a></li>
+ <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+ </ul>
+ <a href="#contact" class="nav-cta-mobile" onclick="closeMobile()">Get in Touch</a>
 </div>
 
 <!-- ═══ HERO ═══════════════════════════════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-content">
-    <div class="hero-inner">
-      <div class="hero-eyebrow reveal">San Diego &amp; New Haven</div>
-      <h1 class="hero-title reveal reveal-delay-1">
-        Koning Zollar <span>LLP</span>
-      </h1>
-      <p class="hero-tagline reveal reveal-delay-2">Strategic. Experienced. Focused.</p>
-      <p class="hero-subtitle reveal reveal-delay-3">
-        A boutique litigation firm handling complex business disputes, employment matters,
-        intellectual property, internal investigations, and shareholder litigation in California,
-        Connecticut, and across the country.
-      </p>
-      <div class="hero-actions reveal reveal-delay-4">
-        <a href="#practice" class="btn-primary">Our Practice</a>
-        <a href="#contact" class="btn-secondary">Contact Us</a>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
+ <div class="hero-content">
+ <div class="hero-inner">
+ <div class="hero-eyebrow reveal">San Diego &amp; New Haven</div>
+ <h1 class="hero-title reveal reveal-delay-1">
+ Koning Zollar <span>LLP</span>
+ </h1>
+ <p class="hero-tagline reveal reveal-delay-2">Strategic. Experienced. Focused.</p>
+ <p class="hero-subtitle reveal reveal-delay-3">
+ A boutique litigation firm handling complex business disputes, employment matters,
+ intellectual property, internal investigations, and shareholder litigation in California, and across the country.
+ </p>
+ <div class="hero-actions reveal reveal-delay-4">
+ <a href="#practice" class="btn-primary">Our Practice</a>
+ <a href="#contact" class="btn-secondary">Contact Us</a>
+ </div>
+ </div>
+ </div>
+ <div class="hero-scroll-hint">
+ <div class="scroll-line"></div>
+ <span>Scroll</span>
+ </div>
 </section>
 
 <!-- ═══ STATS BAR ══════════════════════════════════════════════════════ -->
 <section id="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item reveal">
-        <div class="stat-number">20+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Matters Handled</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-number">2</div>
-        <div class="stat-label">Office Locations</div>
-      </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Practice Areas</div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="stats-grid">
+ <div class="stat-item reveal">
+ <div class="stat-number">20+</div>
+ <div class="stat-label">Years Experience</div>
+ </div>
+ <div class="stat-item reveal reveal-delay-1">
+ <div class="stat-number">500+</div>
+ <div class="stat-label">Matters Handled</div>
+ </div>
+ <div class="stat-item reveal reveal-delay-2">
+ <div class="stat-number">2</div>
+ <div class="stat-label">Office Locations</div>
+ </div>
+ <div class="stat-item reveal reveal-delay-3">
+ <div class="stat-number">5</div>
+ <div class="stat-label">Practice Areas</div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ ABOUT ══════════════════════════════════════════════════════════ -->
 <section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-left">
-        <p class="section-label reveal">About the Firm</p>
-        <h2 class="reveal reveal-delay-1">
-          Sophisticated Litigation.<br/><em>Focused Counsel.</em>
-        </h2>
-        <p class="reveal reveal-delay-2">
-          Koning Zollar LLP is a boutique litigation firm with offices in San Diego and New Haven.
-          We represent clients in high-stakes disputes that demand both legal sophistication and
-          strategic judgment.
-        </p>
-        <p class="reveal reveal-delay-3">
-          Our attorneys bring decades of experience from leading law firms and corporate legal
-          departments. We are trusted by companies, boards, executives, and investors facing
-          matters that require meticulous preparation, creative advocacy, and relentless execution.
-        </p>
-        <div class="about-offices reveal reveal-delay-4">
-          <div class="office-badge">San Diego, CA</div>
-          <div class="office-badge">New Haven, CT</div>
-        </div>
-      </div>
-      <div class="about-right">
-        <div class="about-feature-card reveal reveal-delay-2">
-          <h3>Why Clients Choose Us</h3>
-          <p>
-            We offer the focused attention of a boutique firm with the depth and sophistication of a
-            major practice. Every client receives senior attorney involvement from day one.
-          </p>
-          <ul class="feature-list">
-            <li>Senior attorney attention on every matter</li>
-            <li>Deep experience in complex commercial litigation</li>
-            <li>Coast-to-coast reach from California to Connecticut</li>
-            <li>Efficient, transparent billing and communication</li>
-            <li>Proven track record in high-value disputes</li>
-            <li>Trial-ready from the first day of engagement</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="about-grid">
+ <div class="about-left">
+ <p class="section-label reveal">About the Firm</p>
+ <h2 class="reveal reveal-delay-1">
+ Sophisticated Litigation.<br/><em>Focused Counsel.</em>
+ </h2>
+ <p class="reveal reveal-delay-2">
+ Koning Zollar LLP is a boutique litigation firm with offices in San Diego and New Haven.
+ We represent clients in high-stakes disputes that demand both legal sophistication and
+ strategic judgment.
+ </p>
+ <p class="reveal reveal-delay-3">
+ Our attorneys bring decades of experience from leading law firms and corporate legal
+ departments. We are trusted by companies, boards, executives, and investors facing
+ matters that require meticulous preparation, creative advocacy, and relentless execution.
+ </p>
+ <div class="about-offices reveal reveal-delay-4">
+ <div class="office-badge">San Diego, CA</div>
+ <div class="office-badge">New Haven, CT</div>
+ </div>
+ </div>
+ <div class="about-right">
+ <div class="about-feature-card reveal reveal-delay-2">
+ <h3>Why Clients Choose Us</h3>
+ <p>
+ We offer the focused attention of a boutique firm with the depth and sophistication of a
+ major practice. Every client receives senior attorney involvement from day one.
+ </p>
+ <ul class="feature-list">
+ <li>Senior attorney attention on every matter</li>
+ <li>Deep experience in complex commercial litigation</li>
+ <li>Coast-to-coast reach from California</li>
+ <li>Efficient, transparent billing and communication</li>
+ <li>Proven track record in high-value disputes</li>
+ <li>Trial-ready from the first day of engagement</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ PRACTICE AREAS ═════════════════════════════════════════════════ -->
 <section id="practice">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-label">What We Do</p>
-      <h2>Practice Areas</h2>
-      <p>Complex matters across five focused disciplines, handled by experienced litigators who know how to win.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="practice-grid">
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="section-label">What We Do</p>
+ <h2>Practice Areas</h2>
+ <p>Complex matters across five focused disciplines, handled by experienced litigators who know how to win.</p>
+ <div class="section-divider"></div>
+ </div>
+ <div class="practice-grid">
 
-      <!-- Business Litigation -->
-      <div class="practice-card reveal">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-        </div>
-        <h3>Business Litigation</h3>
-        <p>
-          We represent companies and executives in high-stakes commercial disputes including breach of
-          contract, business torts, partnership disputes, and complex fraud claims. Our litigators
-          have tried cases in state and federal courts across the country.
-        </p>
-      </div>
+ <!-- Business Litigation -->
+ <div class="practice-card reveal">
+ <div class="practice-icon">
+ <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+ </div>
+ <h3>Business Litigation</h3>
+ <p>
+ We represent companies and executives in high-stakes commercial disputes including breach of
+ contract, business torts, partnership disputes, and complex fraud claims. Our litigators
+ have tried cases in state and federal courts across the country.
+ </p>
+ </div>
 
-      <!-- Employment -->
-      <div class="practice-card reveal reveal-delay-1">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Employment</h3>
-        <p>
-          From wage-and-hour class actions to executive compensation disputes and wrongful termination
-          claims, we counsel employers and senior executives through California's complex employment
-          landscape and beyond.
-        </p>
-      </div>
+ <!-- Employment -->
+ <div class="practice-card reveal reveal-delay-1">
+ <div class="practice-icon">
+ <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+ </div>
+ <h3>Employment</h3>
+ <p>
+ From wage-and-hour class actions to executive compensation disputes and wrongful termination
+ claims, we counsel employers and senior executives through California's complex employment
+ landscape and beyond.
+ </p>
+ </div>
 
-      <!-- Intellectual Property -->
-      <div class="practice-card reveal reveal-delay-2">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-        </div>
-        <h3>Intellectual Property</h3>
-        <p>
-          We handle trade secret misappropriation, patent disputes, trademark and copyright
-          infringement, and technology licensing conflicts. We protect the innovations that matter
-          most to your business.
-        </p>
-      </div>
+ <!-- Intellectual Property -->
+ <div class="practice-card reveal reveal-delay-2">
+ <div class="practice-icon">
+ <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+ </div>
+ <h3>Intellectual Property</h3>
+ <p>
+ We handle trade secret misappropriation, patent disputes, trademark and copyright
+ infringement, and technology licensing conflicts. We protect the innovations that matter
+ most to your business.
+ </p>
+ </div>
 
-      <!-- Internal Investigations -->
-      <div class="practice-card reveal reveal-delay-1">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <h3>Internal Investigations</h3>
-        <p>
-          When boards and audit committees need independent counsel, we conduct thorough, privileged
-          investigations into financial irregularities, misconduct, and compliance failures — and
-          advise on remediation and disclosure.
-        </p>
-      </div>
+ <!-- Internal Investigations -->
+ <div class="practice-card reveal reveal-delay-1">
+ <div class="practice-icon">
+ <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+ </div>
+ <h3>Internal Investigations</h3>
+ <p>
+ When boards and audit committees need independent counsel, we conduct thorough, privileged
+ investigations into financial irregularities, misconduct, and compliance failures — and
+ advise on remediation and disclosure.
+ </p>
+ </div>
 
-      <!-- Shareholder Disputes -->
-      <div class="practice-card reveal reveal-delay-2">
-        <div class="practice-icon">
-          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h3>Shareholder Disputes</h3>
-        <p>
-          Derivative actions, merger litigation, books-and-records demands, and minority shareholder
-          disputes. We represent investors, boards, and special committees in matters that determine
-          the future of companies.
-        </p>
-      </div>
+ <!-- Shareholder Disputes -->
+ <div class="practice-card reveal reveal-delay-2">
+ <div class="practice-icon">
+ <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+ </div>
+ <h3>Shareholder Disputes</h3>
+ <p>
+ Derivative actions, merger litigation, books-and-records demands, and minority shareholder
+ disputes. We represent investors, boards, and special committees in matters that determine
+ the future of companies.
+ </p>
+ </div>
 
-    </div>
-  </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ TEAM ═══════════════════════════════════════════════════════════ -->
 <section id="team">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-label">Our People</p>
-      <h2>Meet the Team</h2>
-      <p>Experienced litigators who bring depth, judgment, and personal commitment to every matter.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="team-grid">
-      <div class="team-card reveal">
-        <div class="team-photo">
-          <img src="kzllp-website/images/dennis.png" alt="Dennis Koning" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Dennis Koning</div>
-          <div class="team-role">Partner</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-photo">
-          <img src="kzllp-website/images/blake.png" alt="Blake Zollar" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Blake Zollar</div>
-          <div class="team-role">Partner</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-photo">
-          <img src="kzllp-website/images/drew.png" alt="Drew Natvig" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Drew Natvig</div>
-          <div class="team-role">Associate</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-3">
-        <div class="team-photo">
-          <img src="kzllp-website/images/erik.png" alt="Erik Milch" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Erik Milch</div>
-          <div class="team-role">Associate</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-1">
-        <div class="team-photo">
-          <img src="kzllp-website/images/natalie.png" alt="Natalie Prescott" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Natalie Prescott</div>
-          <div class="team-role">Associate</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-2">
-        <div class="team-photo">
-          <img src="kzllp-website/images/neal.png" alt="Neal Rooney" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Neal Rooney</div>
-          <div class="team-role">Associate</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-3">
-        <div class="team-photo">
-          <img src="kzllp-website/images/brisa.png" alt="Brisa Alfaro" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Brisa Alfaro</div>
-          <div class="team-role">Paralegal</div>
-        </div>
-      </div>
-      <div class="team-card reveal reveal-delay-4">
-        <div class="team-photo">
-          <img src="kzllp-website/images/shaun.png" alt="Shaun Paisley" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
-        </div>
-        <div class="team-info">
-          <div class="team-name">Shaun Paisley</div>
-          <div class="team-role">Of Counsel</div>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="section-label">Our People</p>
+ <h2>Meet the Team</h2>
+ <p>Experienced litigators who bring depth, judgment, and personal commitment to every matter.</p>
+ <div class="section-divider"></div>
+ </div>
+ <div class="team-grid">
+ <div class="team-card reveal">
+ <div class="team-photo">
+ <img src="kzllp-website/images/dennis.png" alt="Dennis Koning" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Dennis Koning</div>
+ <div class="team-role">Partner</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-1">
+ <div class="team-photo">
+ <img src="kzllp-website/images/blake.png" alt="Blake Zollar" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Blake Zollar</div>
+ <div class="team-role">Partner</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-2">
+ <div class="team-photo">
+ <img src="kzllp-website/images/drew.png" alt="Drew Natvig" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Drew Natvig</div>
+ <div class="team-role">Associate</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-3">
+ <div class="team-photo">
+ <img src="kzllp-website/images/erik.png" alt="Erik Milch" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Erik Milch</div>
+ <div class="team-role">Associate</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-1">
+ <div class="team-photo">
+ <img src="kzllp-website/images/natalie.png" alt="Natalie Prescott" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Natalie Prescott</div>
+ <div class="team-role">Associate</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-2">
+ <div class="team-photo">
+ <img src="kzllp-website/images/neal.png" alt="Neal Rooney" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Neal Rooney</div>
+ <div class="team-role">Associate</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-3">
+ <div class="team-photo">
+ <img src="kzllp-website/images/brisa.png" alt="Brisa Alfaro" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Brisa Alfaro</div>
+ <div class="team-role">Paralegal</div>
+ </div>
+ </div>
+ <div class="team-card reveal reveal-delay-4">
+ <div class="team-photo">
+ <img src="kzllp-website/images/shaun.png" alt="Shaun Paisley" onerror="this.parentElement.style.background='#1a2947'" loading="lazy" />
+ </div>
+ <div class="team-info">
+ <div class="team-name">Shaun Paisley</div>
+ <div class="team-role">Of Counsel</div>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ TESTIMONIALS ═══════════════════════════════════════════════════ -->
 <section id="testimonials">
-  <div class="container">
-    <div class="section-header reveal">
-      <p class="section-label">Client Perspectives</p>
-      <h2>What Clients Say</h2>
-      <p>We measure our success by the outcomes we achieve and the trust clients place in us.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
-        <div class="testimonial-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-text">
-          "The team at Koning Zollar handled our complex shareholder dispute with exceptional skill.
-          Their strategic thinking and attention to detail gave us confidence at every stage. We
-          couldn't have asked for better representation."
-        </p>
-        <div class="testimonial-author">
-          <span class="author-name">Board Chairman</span>
-          <span class="author-title">Technology Company, San Diego</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-1">
-        <div class="testimonial-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-text">
-          "When we needed internal investigation counsel, Koning Zollar was the right call. They
-          moved quickly, maintained strict privilege, and delivered a thorough report that gave our
-          board the clarity it needed."
-        </p>
-        <div class="testimonial-author">
-          <span class="author-name">General Counsel</span>
-          <span class="author-title">Financial Services Firm, Connecticut</span>
-        </div>
-      </div>
-      <div class="testimonial-card reveal reveal-delay-2">
-        <div class="testimonial-stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="testimonial-text">
-          "Their trade secret litigation team protected our most valuable IP assets against a
-          well-funded competitor. The result spoke for itself. Boutique firm, major-firm quality —
-          and you actually get to talk to the partner."
-        </p>
-        <div class="testimonial-author">
-          <span class="author-name">CEO</span>
-          <span class="author-title">Life Sciences Company, California</span>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="section-header reveal">
+ <p class="section-label">Client Perspectives</p>
+ <h2>What Clients Say</h2>
+ <p>We measure our success by the outcomes we achieve and the trust clients place in us.</p>
+ <div class="section-divider"></div>
+ </div>
+ <div class="testimonials-grid">
+ <div class="testimonial-card reveal">
+ <div class="testimonial-stars">
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ </div>
+ <p class="testimonial-text">
+ "The team at Koning Zollar handled our complex shareholder dispute with exceptional skill.
+ Their strategic thinking and attention to detail gave us confidence at every stage. We
+ couldn't have asked for better representation."
+ </p>
+ <div class="testimonial-author">
+ <span class="author-name">Board Chairman</span>
+ <span class="author-title">Technology Company, San Diego</span>
+ </div>
+ </div>
+ <div class="testimonial-card reveal reveal-delay-1">
+ <div class="testimonial-stars">
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ </div>
+ <p class="testimonial-text">
+ "When we needed internal investigation counsel, Koning Zollar was the right call. They
+ moved quickly, maintained strict privilege, and delivered a thorough report that gave our
+ board the clarity it needed."
+ </p>
+ <div class="testimonial-author">
+ <span class="author-name">General Counsel</span>
+ <span class="author-title">Financial Services Firm</span>
+ </div>
+ </div>
+ <div class="testimonial-card reveal reveal-delay-2">
+ <div class="testimonial-stars">
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+ </div>
+ <p class="testimonial-text">
+ "Their trade secret litigation team protected our most valuable IP assets against a
+ well-funded competitor. The result spoke for itself. Boutique firm, major-firm quality —
+ and you actually get to talk to the partner."
+ </p>
+ <div class="testimonial-author">
+ <span class="author-name">CEO</span>
+ <span class="author-title">Life Sciences Company, California</span>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ CONTACT ═════════════════════════════════════════════════════════ -->
 <section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-left">
-        <p class="section-label reveal">Get in Touch</p>
-        <h2 class="reveal reveal-delay-1">Ready to Talk?</h2>
-        <p class="reveal reveal-delay-2">
-          If you're facing a significant legal dispute or need sophisticated litigation counsel,
-          we'd like to hear about it. Initial consultations are confidential.
-        </p>
-        <div class="offices-list">
-          <div class="office-item reveal reveal-delay-3">
-            <h4>San Diego</h4>
-            <address>
-              501 W Broadway, Suite 800<br />
-              San Diego, CA 92101
-            </address>
-          </div>
-          <div class="office-item reveal reveal-delay-4">
-            <h4>New Haven</h4>
-            <address>
-              265 Church Street, Suite 802<br />
-              New Haven, CT 06510
-            </address>
-          </div>
-        </div>
-        <a href="mailto:info@kzllp.com" class="contact-email reveal reveal-delay-5">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          info@kzllp.com
-        </a>
-      </div>
-      <div class="contact-right reveal reveal-delay-2">
-        <div class="contact-form">
-          <h3>Send a Message</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="Jane" />
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lname" placeholder="Smith" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" />
-          </div>
-          <div class="form-group">
-            <label for="company">Company / Organization</label>
-            <input type="text" id="company" name="company" placeholder="Optional" />
-          </div>
-          <div class="form-group">
-            <label for="practice">Practice Area</label>
-            <select id="practice" name="practice">
-              <option value="">Select an area...</option>
-              <option value="business">Business Litigation</option>
-              <option value="employment">Employment</option>
-              <option value="ip">Intellectual Property</option>
-              <option value="investigations">Internal Investigations</option>
-              <option value="shareholder">Shareholder Disputes</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Brief Description</label>
-            <textarea id="message" name="message" placeholder="Describe your matter briefly..."></textarea>
-          </div>
-          <button type="submit" class="form-submit">Send Message</button>
-          <p class="form-privacy">All inquiries are held in strict confidence. Attorney-client privilege attaches upon engagement.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="contact-grid">
+ <div class="contact-left">
+ <p class="section-label reveal">Get in Touch</p>
+ <h2 class="reveal reveal-delay-1">Ready to Talk?</h2>
+ <p class="reveal reveal-delay-2">
+ If you're facing a significant legal dispute or need sophisticated litigation counsel,
+ we'd like to hear about it. Initial consultations are confidential.
+ </p>
+ <div class="offices-list">
+ <div class="office-item reveal reveal-delay-3">
+ <h4>San Diego</h4>
+ <address>
+ 501 W Broadway, Suite 800<br />
+ San Diego, CA 92101
+ </address>
+ </div>
+ <div class="office-item reveal reveal-delay-4">
+ <h4>New Haven</h4>
+ <address>
+ 265 Church Street, Suite 802<br />
+ New Haven, CT 06510
+ </address>
+ </div>
+ </div>
+ <a href="mailto:info@kzllp.com" class="contact-email reveal reveal-delay-5">
+ <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ info@kzllp.com
+ </a>
+ </div>
+ <div class="contact-right reveal reveal-delay-2">
+ <div class="contact-form">
+ <h3>Send a Message</h3>
+ <div class="form-row">
+ <div class="form-group">
+ <label for="fname">First Name</label>
+ <input type="text" id="fname" name="fname" placeholder="Jane" />
+ </div>
+ <div class="form-group">
+ <label for="lname">Last Name</label>
+ <input type="text" id="lname" name="lname" placeholder="Smith" />
+ </div>
+ </div>
+ <div class="form-group">
+ <label for="email">Email Address</label>
+ <input type="email" id="email" name="email" placeholder="jane@company.com" />
+ </div>
+ <div class="form-group">
+ <label for="company">Company / Organization</label>
+ <input type="text" id="company" name="company" placeholder="Optional" />
+ </div>
+ <div class="form-group">
+ <label for="practice">Practice Area</label>
+ <select id="practice" name="practice">
+ <option value="">Select an area...</option>
+ <option value="business">Business Litigation</option>
+ <option value="employment">Employment</option>
+ <option value="ip">Intellectual Property</option>
+ <option value="investigations">Internal Investigations</option>
+ <option value="shareholder">Shareholder Disputes</option>
+ <option value="other">Other</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label for="message">Brief Description</label>
+ <textarea id="message" name="message" placeholder="Describe your matter briefly..."></textarea>
+ </div>
+ <button type="submit" class="form-submit">Send Message</button>
+ <p class="form-privacy">All inquiries are held in strict confidence. Attorney-client privilege attaches upon engagement.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- ═══ FOOTER ══════════════════════════════════════════════════════════ -->
 <footer id="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a href="#hero" class="nav-logo">
-          <div class="nav-logo-mark">
-            <span class="nav-logo-kz">KZ</span>
-          </div>
-          <div class="nav-logo-text">
-            <span class="nav-logo-name">Koning Zollar</span>
-            <span class="nav-logo-sub">LLP</span>
-          </div>
-        </a>
-        <p>A boutique litigation firm representing clients in complex, high-stakes disputes in California, Connecticut, and across the country.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Practice</h4>
-        <ul>
-          <li><a href="#practice">Business Litigation</a></li>
-          <li><a href="#practice">Employment</a></li>
-          <li><a href="#practice">Intellectual Property</a></li>
-          <li><a href="#practice">Internal Investigations</a></li>
-          <li><a href="#practice">Shareholder Disputes</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Firm</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#testimonials">Results</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Offices</h4>
-        <ul>
-          <li><a href="#contact">San Diego, CA</a></li>
-          <li><a href="#contact">New Haven, CT</a></li>
-          <li><a href="mailto:info@kzllp.com">info@kzllp.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2024 Koning Zollar LLP. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
-        <a href="#">Attorney Advertising</a>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="footer-inner">
+ <div class="footer-brand">
+ <a href="#hero" class="nav-logo">
+ <div class="nav-logo-mark">
+ <span class="nav-logo-kz">KZ</span>
+ </div>
+ <div class="nav-logo-text">
+ <span class="nav-logo-name">Koning Zollar</span>
+ <span class="nav-logo-sub">LLP</span>
+ </div>
+ </a>
+ <p>A boutique litigation firm representing clients in complex, high-stakes disputes in California, and across the country.</p>
+ </div>
+ <div class="footer-col">
+ <h4>Practice</h4>
+ <ul>
+ <li><a href="#practice">Business Litigation</a></li>
+ <li><a href="#practice">Employment</a></li>
+ <li><a href="#practice">Intellectual Property</a></li>
+ <li><a href="#practice">Internal Investigations</a></li>
+ <li><a href="#practice">Shareholder Disputes</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Firm</h4>
+ <ul>
+ <li><a href="#about">About Us</a></li>
+ <li><a href="#team">Our Team</a></li>
+ <li><a href="#testimonials">Results</a></li>
+ <li><a href="#contact">Contact</a></li>
+ </ul>
+ </div>
+ <div class="footer-col">
+ <h4>Offices</h4>
+ <ul>
+ <li><a href="#contact">San Diego, CA</a></li>
+ <li><a href="#contact">New Haven, CT</a></li>
+ <li><a href="mailto:info@kzllp.com">info@kzllp.com</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p>© 2024 Koning Zollar LLP. All rights reserved.</p>
+ <div class="footer-legal">
+ <a href="#">Privacy Policy</a>
+ <a href="#">Terms of Use</a>
+ <a href="#">Attorney Advertising</a>
+ </div>
+ </div>
+ </div>
 </footer>
 
 <script>
-  // ── Navbar scroll ──────────────────────────────────────────────────────
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 40);
-  }, { passive: true });
+ // ── Navbar scroll ──────────────────────────────────────────────────────
+ const navbar = document.getElementById('navbar');
+ window.addEventListener('scroll', () => {
+ navbar.classList.toggle('scrolled', window.scrollY > 40);
+ }, { passive: true });
 
-  // ── Hamburger menu ─────────────────────────────────────────────────────
-  const hamburger = document.getElementById('hamburger');
-  const navMobile = document.getElementById('nav-mobile');
+ // ── Hamburger menu ─────────────────────────────────────────────────────
+ const hamburger = document.getElementById('hamburger');
+ const navMobile = document.getElementById('nav-mobile');
 
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navMobile.classList.toggle('open');
-  });
+ hamburger.addEventListener('click', () => {
+ hamburger.classList.toggle('open');
+ navMobile.classList.toggle('open');
+ });
 
-  function closeMobile() {
-    hamburger.classList.remove('open');
-    navMobile.classList.remove('open');
-  }
+ function closeMobile() {
+ hamburger.classList.remove('open');
+ navMobile.classList.remove('open');
+ }
 
-  // ── Scroll-reveal ──────────────────────────────────────────────────────
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+ // ── Scroll-reveal ──────────────────────────────────────────────────────
+ const revealObserver = new IntersectionObserver((entries) => {
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ entry.target.classList.add('visible');
+ revealObserver.unobserve(entry.target);
+ }
+ });
+ }, { threshold: 0.12 });
 
-  document.querySelectorAll('.reveal').forEach(el => {
-    // Hero elements start visible
-    if (el.closest('#hero')) {
-      el.classList.add('visible');
-    } else {
-      revealObserver.observe(el);
-    }
-  });
+ document.querySelectorAll('.reveal').forEach(el => {
+ // Hero elements start visible
+ if (el.closest('#hero')) {
+ el.classList.add('visible');
+ } else {
+ revealObserver.observe(el);
+ }
+ });
 
-  // ── Smooth scroll for anchor links ────────────────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
+ // ── Smooth scroll for anchor links ────────────────────────────────────
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', e => {
+ const target = document.querySelector(anchor.getAttribute('href'));
+ if (target) {
+ e.preventDefault();
+ target.scrollIntoView({ behavior: 'smooth' });
+ }
+ });
+ });
 
-  // ── Form submit (demo) ─────────────────────────────────────────────────
-  document.querySelector('.form-submit').addEventListener('click', (e) => {
-    e.preventDefault();
-    const btn = e.target;
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#16a34a';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-    }, 3000);
-  });
+ // ── Form submit (demo) ─────────────────────────────────────────────────
+ document.querySelector('.form-submit').addEventListener('click', (e) => {
+ e.preventDefault();
+ const btn = e.target;
+ btn.textContent = 'Message Sent ✓';
+ btn.style.background = '#16a34a';
+ setTimeout(() => {
+ btn.textContent = 'Send Message';
+ btn.style.background = '';
+ }, 3000);
+ });
 </script>
 </body>
 </html>

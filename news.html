@@ -1,258 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Latest news and legal updates from Koning Zollar LLP.">
-  <title>News | Koning Zollar LLP</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .news-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .news-article {
-      padding: 3.5rem 0;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-    .news-article:last-child { border-bottom: none; }
-    .news-meta { position: sticky; top: 7rem; }
-    .news-tag {
-      display: inline-block;
-      padding: 0.35rem 0.9rem;
-      border: 1px solid var(--border);
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .news-tag.employment { border-color: rgba(100,160,255,0.3); color: #78aaff; }
-    .news-tag.ip { border-color: rgba(201,169,110,0.5); color: var(--gold); }
-    .news-date {
-      font-size: 0.78rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-    .news-body h3 {
-      font-family: var(--font-serif);
-      font-size: clamp(1.3rem, 2vw, 1.65rem);
-      font-weight: 400;
-      line-height: 1.3;
-      margin-bottom: 1.5rem;
-      color: var(--white);
-    }
-    .news-body p {
-      font-size: 0.95rem;
-      line-height: 1.85;
-      color: rgba(245,245,243,0.72);
-      max-width: none;
-      margin-bottom: 1rem;
-    }
-    .news-body ul {
-      margin: 1rem 0 1rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .news-body ul li {
-      font-size: 0.95rem;
-      color: rgba(245,245,243,0.72);
-      line-height: 1.7;
-    }
-    .news-body a {
-      color: var(--gold);
-      border-bottom: 1px solid rgba(201,169,110,0.3);
-      transition: border-color 0.2s;
-    }
-    .news-body a:hover { border-color: var(--gold); }
-    .news-body h4 { margin: 1.75rem 0 0.6rem; font-size: 0.85rem; }
-    @media (max-width: 768px) {
-      .news-article { grid-template-columns: 1fr; gap: 1.5rem; }
-      .news-meta { position: static; }
-    }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Latest news and legal updates from Koning Zollar LLP.">
+ <title>News | Koning Zollar LLP</title>
+ <link rel="stylesheet" href="css/styles.css">
+ <style>
+ .news-grid {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 2rem;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 0;
+ }
+ .news-article {
+ padding: 3.5rem 0;
+ border-bottom: 1px solid var(--border);
+ display: grid;
+ grid-template-columns: 220px 1fr;
+ gap: 3.5rem;
+ align-items: start;
+ }
+ .news-article:last-child { border-bottom: none; }
+ .news-meta { position: sticky; top: 7rem; }
+ .news-tag {
+ display: inline-block;
+ padding: 0.35rem 0.9rem;
+ border: 1px solid var(--border);
+ font-size: 0.65rem;
+ font-weight: 600;
+ letter-spacing: 0.16em;
+ text-transform: uppercase;
+ color: var(--gold);
+ margin-bottom: 1rem;
+ }
+ .news-tag.employment { border-color: rgba(100,160,255,0.3); color: #78aaff; }
+ .news-tag.ip { border-color: rgba(201,169,110,0.5); color: var(--gold); }
+ .news-date {
+ font-size: 0.78rem;
+ color: var(--muted);
+ letter-spacing: 0.05em;
+ }
+ .news-body h3 {
+ font-family: var(--font-serif);
+ font-size: clamp(1.3rem, 2vw, 1.65rem);
+ font-weight: 400;
+ line-height: 1.3;
+ margin-bottom: 1.5rem;
+ color: var(--white);
+ }
+ .news-body p {
+ font-size: 0.95rem;
+ line-height: 1.85;
+ color: rgba(245,245,243,0.72);
+ max-width: none;
+ margin-bottom: 1rem;
+ }
+ .news-body ul {
+ margin: 1rem 0 1rem 1.5rem;
+ display: flex;
+ flex-direction: column;
+ gap: 0.5rem;
+ }
+ .news-body ul li {
+ font-size: 0.95rem;
+ color: rgba(245,245,243,0.72);
+ line-height: 1.7;
+ }
+ .news-body a {
+ color: var(--gold);
+ border-bottom: 1px solid rgba(201,169,110,0.3);
+ transition: border-color 0.2s;
+ }
+ .news-body a:hover { border-color: var(--gold); }
+ .news-body h4 { margin: 1.75rem 0 0.6rem; font-size: 0.85rem; }
+ @media (max-width: 768px) {
+ .news-article { grid-template-columns: 1fr; gap: 1.5rem; }
+ .news-meta { position: static; }
+ }
+ </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="images/logo.png" alt="Koning Zollar LLP" class="nav-logo-img">
-        <span class="nav-logo-text">Koning Zollar<br>LLP</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li class="nav-dropdown">
-          <a href="#">Practice Areas <span class="dropdown-arrow">▾</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="business-litigation.html">Business Litigation</a></li>
-            <li><a href="employment.html">Employment</a></li>
-            <li><a href="intellectual-property.html">Intellectual Property</a></li>
-            <li><a href="investigations.html">Internal Investigations</a></li>
-            <li><a href="shareholder-disputes.html">Shareholder Disputes</a></li>
-          </ul>
-        </li>
-        <li><a href="news.html" class="active">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="nav-hamburger"><span></span><span></span><span></span></div>
-    </div>
-  </nav>
-  <ul class="nav-mobile">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="business-litigation.html">Business Litigation</a></li>
-    <li><a href="employment.html">Employment</a></li>
-    <li><a href="intellectual-property.html">Intellectual Property</a></li>
-    <li><a href="investigations.html">Internal Investigations</a></li>
-    <li><a href="shareholder-disputes.html">Shareholder Disputes</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
+ <!-- NAV -->
+ <nav class="nav">
+ <div class="nav-inner">
+ <a href="index.html" class="nav-logo">
+ <img src="images/logo.png" alt="Koning Zollar LLP" class="nav-logo-img">
+ <span class="nav-logo-text">Koning Zollar<br>LLP</span>
+ </a>
+ <ul class="nav-links">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="team.html">Team</a></li>
+ <li class="nav-dropdown">
+ <a href="#">Practice Areas <span class="dropdown-arrow">▾</span></a>
+ <ul class="dropdown-menu">
+ <li><a href="business-litigation.html">Business Litigation</a></li>
+ <li><a href="employment.html">Employment</a></li>
+ <li><a href="intellectual-property.html">Intellectual Property</a></li>
+ <li><a href="investigations.html">Internal Investigations</a></li>
+ <li><a href="shareholder-disputes.html">Shareholder Disputes</a></li>
+ </ul>
+ </li>
+ <li><a href="news.html" class="active">News</a></li>
+ <li><a href="contact.html">Contact Us</a></li>
+ </ul>
+ <div class="nav-hamburger"><span></span><span></span><span></span></div>
+ </div>
+ </nav>
+ <ul class="nav-mobile">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="team.html">Team</a></li>
+ <li><a href="business-litigation.html">Business Litigation</a></li>
+ <li><a href="employment.html">Employment</a></li>
+ <li><a href="intellectual-property.html">Intellectual Property</a></li>
+ <li><a href="investigations.html">Internal Investigations</a></li>
+ <li><a href="shareholder-disputes.html">Shareholder Disputes</a></li>
+ <li><a href="news.html">News</a></li>
+ <li><a href="contact.html">Contact Us</a></li>
+ </ul>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> News</div>
-      <h1 class="animate">News &amp; Updates</h1>
-      <p class="page-sub animate animate-delay-1">Legal developments and firm updates from Koning Zollar LLP.</p>
-    </div>
-  </section>
+ <!-- PAGE HERO -->
+ <section class="page-hero">
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> News</div>
+ <h1 class="animate">News &amp; Updates</h1>
+ <p class="page-sub animate animate-delay-1">Legal developments and firm updates from Koning Zollar LLP.</p>
+ </div>
+ </section>
 
-  <!-- NEWS ARTICLES -->
-  <section style="background:var(--navy); padding: 5rem 0;">
-    <div class="news-grid">
+ <!-- NEWS ARTICLES -->
+ <section style="background:var(--navy); padding: 5rem 0;">
+ <div class="news-grid">
 
-      <!-- Article 1 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag ip">IP News</span>
-          <p class="news-date">April 2025</p>
-        </div>
-        <div class="news-body">
-          <h3>Federal Circuit Holds Applicant Prior Art Cannot "Form Part of the Basis" of an IPR Ground</h3>
-          <p>In <em>Qualcomm Inc. v. Apple Inc.</em>, the U.S. Court of Appeals for the Federal Circuit reversed a PTAB decision on remand that found a patent obvious based on applicant admitted prior art (AAPA) combined with prior art patents. The Court held that explicitly identifying AAPA as a "basis" for an IPR ground violates 35 U.S.C. § 311(b).</p>
-          <p>It rejected the PTAB's blanket rule that combining AAPA with patents or printed publications automatically removes it from being a ground's basis. While the ruling confirms that expressly citing AAPA as a ground is improper, it leaves the boundary between proper and improper uses of AAPA in other contexts unresolved.</p>
-          <p><a href="https://www.cafc.uscourts.gov/opinions-orders/23-1208.OPINION.4-23-2025_2503159.pdf" target="_blank" rel="noopener">See Qualcomm Inc. v. Apple Inc., 134 F.4th 1355 (Fed. Cir. 2025) →</a></p>
-        </div>
-      </article>
+ <!-- Article 1 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag ip">IP News</span>
+ <p class="news-date">April 2025</p>
+ </div>
+ <div class="news-body">
+ <h3>Federal Circuit Holds Applicant Prior Art Cannot "Form Part of the Basis" of an IPR Ground</h3>
+ <p>In <em>Qualcomm Inc. v. Apple Inc.</em>, the U.S. Court of Appeals for the Federal Circuit reversed a PTAB decision on remand that found a patent obvious based on applicant admitted prior art (AAPA) combined with prior art patents. The Court held that explicitly identifying AAPA as a "basis" for an IPR ground violates 35 U.S.C. § 311(b).</p>
+ <p>It rejected the PTAB's blanket rule that combining AAPA with patents or printed publications automatically removes it from being a ground's basis. While the ruling confirms that expressly citing AAPA as a ground is improper, it leaves the boundary between proper and improper uses of AAPA in other contexts unresolved.</p>
+ <p><a href="https://www.cafc.uscourts.gov/opinions-orders/23-1208.OPINION.4-23-2025_2503159.pdf" target="_blank" rel="noopener">See Qualcomm Inc. v. Apple Inc. 134 F.4th 1355 (Fed. Cir. 2025) →</a></p>
+ </div>
+ </article>
 
-      <!-- Article 2 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag employment">Employment News</span>
-          <p class="news-date">October 2024</p>
-        </div>
-        <div class="news-body">
-          <h3>NLRB Takes Aim at Employee Repayment Agreements</h3>
-          <p>On October 7, 2024, NLRB General Counsel Jennifer Abruzzo issued Memorandum GC 25-01, titled "Remedying the Harmful Effects of Non-Compete and 'Stay-or-Pay' Provisions that Violate the National Labor Relations Act." The memorandum addresses "stay-or-pay" agreements that require employees to repay benefits or costs — such as training, sign-on bonuses, or relocation expenses — if they leave within a set period.</p>
-          <p>According to the NLRB, such agreements may infringe upon employees' rights under Section 7 of the NLRA. The memorandum sets out four conditions for a lawful stay-or-pay provision:</p>
-          <ul>
-            <li><strong>Voluntary Agreement:</strong> Employees must enter voluntarily, without coercion.</li>
-            <li><strong>Reasonable Repayment Amount:</strong> Must reflect actual costs, not excessive fees limiting mobility.</li>
-            <li><strong>Reasonable Duration:</strong> Should align with the value of the benefit provided.</li>
-            <li><strong>No Repayment for Involuntary Termination:</strong> Repayment should be waived for employees terminated without cause.</li>
-          </ul>
-          <p>Employers were given a 60-day window from the memorandum's issuance to cure preexisting provisions. If you have questions about this topic or California employment law, please <a href="contact.html">contact our employment team</a>.</p>
-        </div>
-      </article>
+ <!-- Article 2 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag employment">Employment News</span>
+ <p class="news-date">October 2024</p>
+ </div>
+ <div class="news-body">
+ <h3>NLRB Takes Aim at Employee Repayment Agreements</h3>
+ <p>On October 7, 2024, NLRB General Counsel Jennifer Abruzzo issued Memorandum GC 25-01, titled "Remedying the Harmful Effects of Non-Compete and 'Stay-or-Pay' Provisions that Violate the National Labor Relations Act." The memorandum addresses "stay-or-pay" agreements that require employees to repay benefits or costs — such as training, sign-on bonuses, or relocation expenses — if they leave within a set period.</p>
+ <p>According to the NLRB, such agreements may infringe upon employees' rights under Section 7 of the NLRA. The memorandum sets out four conditions for a lawful stay-or-pay provision:</p>
+ <ul>
+ <li><strong>Voluntary Agreement:</strong> Employees must enter voluntarily, without coercion.</li>
+ <li><strong>Reasonable Repayment Amount:</strong> Must reflect actual costs, not excessive fees limiting mobility.</li>
+ <li><strong>Reasonable Duration:</strong> Should align with the value of the benefit provided.</li>
+ <li><strong>No Repayment for Involuntary Termination:</strong> Repayment should be waived for employees terminated without cause.</li>
+ </ul>
+ <p>Employers were given a 60-day window from the memorandum's issuance to cure preexisting provisions. If you have questions about this topic or California employment law, please <a href="contact.html">contact our employment team</a>.</p>
+ </div>
+ </article>
 
-      <!-- Article 3 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag ip">IP News</span>
-          <p class="news-date">October 2024</p>
-        </div>
-        <div class="news-body">
-          <h3>Federal Circuit Reverses MSJ Where Party Falsely Claimed Product Was Patented</h3>
-          <p>In <em>Crocs, Inc. v. Effervescent, Inc. et al.</em>, the Federal Circuit reversed a district court's summary judgment favoring Crocs. Dawgs had counterclaimed alleging Crocs falsely advertised its shoe material "Croslite" as "patented," "proprietary," and "exclusive" in violation of Section 43(a)(1)(B) of the Lanham Act.</p>
-          <p>The Federal Circuit held that falsely claiming a product feature is patented, in a way that misleads consumers about the product's qualities, does give rise to a Lanham Act claim. The court reversed the summary judgment and remanded for further proceedings.</p>
-          <p><a href="https://fedcircuitblog.com/wp-content/uploads/2024/03/Crocs-op.pdf" target="_blank" rel="noopener">See Crocs, Inc. v. Effervescent, Inc. et al., Case 2022-2160 (Fed. Cir. Oct. 3, 2024) →</a></p>
-        </div>
-      </article>
+ <!-- Article 3 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag ip">IP News</span>
+ <p class="news-date">October 2024</p>
+ </div>
+ <div class="news-body">
+ <h3>Federal Circuit Reverses MSJ Where Party Falsely Claimed Product Was Patented</h3>
+ <p>In <em>Crocs, Inc. v. Effervescent, Inc. et al.</em>, the Federal Circuit reversed a district court's summary judgment favoring Crocs. Dawgs had counterclaimed alleging Crocs falsely advertised its shoe material "Croslite" as "patented," "proprietary," and "exclusive" in violation of Section 43(a)(1)(B) of the Lanham Act.</p>
+ <p>The Federal Circuit held that falsely claiming a product feature is patented, in a way that misleads consumers about the product's qualities, does give rise to a Lanham Act claim. The court reversed the summary judgment and remanded for further proceedings.</p>
+ <p><a href="https://fedcircuitblog.com/wp-content/uploads/2024/03/Crocs-op.pdf" target="_blank" rel="noopener">See Crocs, Inc. v. Effervescent, Inc. et al. Case 2022-2160 (Fed. Cir. Oct. 3, 2024) →</a></p>
+ </div>
+ </article>
 
-      <!-- Article 4 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag ip">IP News</span>
-          <p class="news-date">May 2023</p>
-        </div>
-        <div class="news-body">
-          <h3>Federal Circuit Reverses PTAB Decision Concerning "Analogous Art" Obviousness</h3>
-          <p>In <em>Sanofi-Aventis v. Mylan Pharms</em>, the Federal Circuit reversed a PTAB decision invalidating a patent as obvious based on a reference the PTAB found "analogous art" — even though the patent challenger had never made that argument.</p>
-          <p>The "analogous arts" test determines whether a reference is relevant for obviousness analysis. A reference qualifies if it is from the same field of endeavor as the invention, or is reasonably pertinent to the problem the invention addresses.</p>
-          <p>The Court held that the patent challenger must explicitly argue that a prior art reference is analogous to the challenged patent — not merely to another cited reference. The Court explained: "In evaluating whether a reference is analogous, we have consistently held that a patent challenger must compare the reference to the challenged patent."</p>
-          <p><a href="https://cafc.uscourts.gov/opinions-orders/21-1981.OPINION.5-9-2023_2123775.pdf" target="_blank" rel="noopener">See Sanofi-Aventis Deutschland GMBH v. Mylan Pharms Inc., Case 21-1981 (Fed. Cir. May 9, 2023) →</a></p>
-        </div>
-      </article>
+ <!-- Article 4 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag ip">IP News</span>
+ <p class="news-date">May 2023</p>
+ </div>
+ <div class="news-body">
+ <h3>Federal Circuit Reverses PTAB Decision Concerning "Analogous Art" Obviousness</h3>
+ <p>In <em>Sanofi-Aventis v. Mylan Pharms</em>, the Federal Circuit reversed a PTAB decision invalidating a patent as obvious based on a reference the PTAB found "analogous art" — even though the patent challenger had never made that argument.</p>
+ <p>The "analogous arts" test determines whether a reference is relevant for obviousness analysis. A reference qualifies if it is from the same field of endeavor as the invention, or is reasonably pertinent to the problem the invention addresses.</p>
+ <p>The Court held that the patent challenger must explicitly argue that a prior art reference is analogous to the challenged patent — not merely to another cited reference. The Court explained: "In evaluating whether a reference is analogous, we have consistently held that a patent challenger must compare the reference to the challenged patent."</p>
+ <p><a href="https://cafc.uscourts.gov/opinions-orders/21-1981.OPINION.5-9-2023_2123775.pdf" target="_blank" rel="noopener">See Sanofi-Aventis Deutschland GMBH v. Mylan Pharms Inc. Case 21-1981 (Fed. Cir. May 9, 2023) →</a></p>
+ </div>
+ </article>
 
-      <!-- Article 5 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag employment">Employment News</span>
-          <p class="news-date">February 2022</p>
-        </div>
-        <div class="news-body">
-          <h3>California Implements New COVID-19 Supplemental Paid Sick Leave Law</h3>
-          <p>On February 9, 2022, Governor Newsom signed Senate Bill 114 into law, creating Labor Code Section 248.6 and providing qualified California workers with up to 80 hours of paid COVID-related sick leave. The law applies to employers with 26 or more employees, is retroactive to January 1, 2022, and remained in effect through September 30, 2022.</p>
-          <p>Qualifying reasons include COVID-19 symptoms, quarantine orders, vaccination appointments, and care for affected family members. Key employer considerations include:</p>
-          <ul>
-            <li>This is a <em>supplemental</em> benefit — employers cannot offset existing sick leave entitlements.</li>
-            <li>Employers may require COVID-19 test results, but employees self-determine qualifying hours needed.</li>
-            <li>Employee classification (exempt vs. non-exempt) affects the rate of pay during leave.</li>
-          </ul>
-          <p>If you have questions about this update or how to apply these requirements, please <a href="contact.html">contact our employment team</a>.</p>
-        </div>
-      </article>
+ <!-- Article 5 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag employment">Employment News</span>
+ <p class="news-date">February 2022</p>
+ </div>
+ <div class="news-body">
+ <h3>California Implements New COVID-19 Supplemental Paid Sick Leave Law</h3>
+ <p>On February 9, 2022, Governor Newsom signed Senate Bill 114 into law, creating Labor Code Section 248.6 and providing qualified California workers with up to 80 hours of paid COVID-related sick leave. The law applies to employers with 26 or more employees, is retroactive to January 1, 2022, and remained in effect through September 30, 2022.</p>
+ <p>Qualifying reasons include COVID-19 symptoms, quarantine orders, vaccination appointments, and care for affected family members. Key employer considerations include:</p>
+ <ul>
+ <li>This is a <em>supplemental</em> benefit — employers cannot offset existing sick leave entitlements.</li>
+ <li>Employers may require COVID-19 test results, but employees self-determine qualifying hours needed.</li>
+ <li>Employee classification (exempt vs. non-exempt) affects the rate of pay during leave.</li>
+ </ul>
+ <p>If you have questions about this update or how to apply these requirements, please <a href="contact.html">contact our employment team</a>.</p>
+ </div>
+ </article>
 
-      <!-- Article 6 -->
-      <article class="news-article animate">
-        <div class="news-meta">
-          <span class="news-tag employment">Employment News</span>
-          <p class="news-date">July 2021</p>
-        </div>
-        <div class="news-body">
-          <h3>California Supreme Court: Meal and Rest Break Premiums Must Be Paid at the "Regular Rate" of Pay</h3>
-          <p>The California Supreme Court ruled in <em>Ferra v. Loews Hollywood Hotel</em> that an employee's "regular rate of compensation" for meal and rest break penalties includes all nondiscretionary payments — not just base hourly wages. This decision has significant retroactive impact on all California employers.</p>
-          <p>Under California law, a non-exempt employee denied a compliant meal or rest break is owed one additional hour of "premium pay." The Supreme Court rejected the prevailing practice of paying only the base hourly rate for this premium, holding that all nondiscretionary compensation must be included in the calculation.</p>
-          <p>Employers should audit their current practices and consult counsel to ensure compliance. If you have questions about this ruling and its impact on your business, please <a href="contact.html">contact our employment team</a>.</p>
-        </div>
-      </article>
+ <!-- Article 6 -->
+ <article class="news-article animate">
+ <div class="news-meta">
+ <span class="news-tag employment">Employment News</span>
+ <p class="news-date">July 2021</p>
+ </div>
+ <div class="news-body">
+ <h3>California Supreme Court: Meal and Rest Break Premiums Must Be Paid at the "Regular Rate" of Pay</h3>
+ <p>The California Supreme Court ruled in <em>Ferra v. Loews Hollywood Hotel</em> that an employee's "regular rate of compensation" for meal and rest break penalties includes all nondiscretionary payments — not just base hourly wages. This decision has significant retroactive impact on all California employers.</p>
+ <p>Under California law, a non-exempt employee denied a compliant meal or rest break is owed one additional hour of "premium pay." The Supreme Court rejected the prevailing practice of paying only the base hourly rate for this premium, holding that all nondiscretionary compensation must be included in the calculation.</p>
+ <p>Employers should audit their current practices and consult counsel to ensure compliance. If you have questions about this ruling and its impact on your business, please <a href="contact.html">contact our employment team</a>.</p>
+ </div>
+ </article>
 
-    </div>
-  </section>
+ </div>
+ </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <img src="images/logo.png" alt="Koning Zollar LLP" class="nav-logo-img">
-            <span class="nav-logo-text">Koning Zollar<br>LLP</span>
-          </div>
-          <p>A litigation boutique focused on complex commercial, employment, and intellectual property disputes.</p>
-        </div>
-        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="team.html">Team</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-        <div class="footer-col"><h4>Practice Areas</h4><ul><li><a href="business-litigation.html">Business Litigation</a></li><li><a href="employment.html">Employment</a></li><li><a href="intellectual-property.html">Intellectual Property</a></li><li><a href="investigations.html">Internal Investigations</a></li><li><a href="shareholder-disputes.html">Shareholder Disputes</a></li></ul></div>
-        <div class="footer-col"><h4>Offices</h4><ul><li><a href="contact.html">KZ West · Encinitas, CA</a></li><li><a href="contact.html">KZ East · New Haven, CT</a></li><li><a href="tel:8582523234">858.252.3234</a></li></ul></div>
-      </div>
-      <div class="footer-bottom"><p>© 2025 Koning Zollar LLP | All Rights Reserved | <a href="#">Disclaimer &amp; Terms of Use</a> | <a href="#">Fraud Alert</a></p></div>
-    </div>
-  </footer>
+ <!-- FOOTER -->
+ <footer>
+ <div class="footer-inner">
+ <div class="footer-grid">
+ <div class="footer-brand">
+ <div class="nav-logo">
+ <img src="images/logo.png" alt="Koning Zollar LLP" class="nav-logo-img">
+ <span class="nav-logo-text">Koning Zollar<br>LLP</span>
+ </div>
+ <p>A litigation boutique focused on complex commercial, employment, and intellectual property disputes.</p>
+ </div>
+ <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="team.html">Team</a></li><li><a href="news.html">News</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+ <div class="footer-col"><h4>Practice Areas</h4><ul><li><a href="business-litigation.html">Business Litigation</a></li><li><a href="employment.html">Employment</a></li><li><a href="intellectual-property.html">Intellectual Property</a></li><li><a href="investigations.html">Internal Investigations</a></li><li><a href="shareholder-disputes.html">Shareholder Disputes</a></li></ul></div>
+ <div class="footer-col"><h4>Offices</h4><ul><li><a href="contact.html">KZ West · Encinitas, CA</a></li><li><a href="contact.html">KZ East · New Haven, CT</a></li><li><a href="tel:8582523234">858.252.3234</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>© 2025 Koning Zollar LLP | All Rights Reserved | <a href="#">Disclaimer &amp; Terms of Use</a> | <a href="#">Fraud Alert</a></p></div>
+ </div>
+ </footer>
 
-  <script src="js/main.js"></script>
+ <script src="js/main.js"></script>
 </body>
 </html>
