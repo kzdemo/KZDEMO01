@@ -250,7 +250,7 @@ section { padding: 6rem 0; }
  HERO
 ───────────────────────────────────────── */
 .hero {
- min-height: 70vh;
+ min-height: 50vh;
  display: flex;
  align-items: center;
  position: relative;
