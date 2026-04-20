@@ -255,19 +255,39 @@ section { padding: 6rem 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(10,15,30,0.92) 0%, rgba(18,25,41,0.85) 100%),
-    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&auto=format&fit=crop') center/cover no-repeat;
+  background: var(--navy);
+}
+/* Crossfade slideshow layers */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.8s ease-in-out;
+  z-index: 0;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+/* Dark overlay on each slide */
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(10,15,30,0.88) 0%, rgba(18,25,41,0.78) 100%);
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.06) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
 }
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -351,6 +371,7 @@ section { padding: 6rem 0; }
   gap: 0.5rem;
   opacity: 0;
   animation: fadeIn 1s ease 1.5s forwards;
+  z-index: 2;
 }
 .hero-scroll span {
   font-size: 0.65rem;

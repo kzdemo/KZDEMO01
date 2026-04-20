@@ -116,6 +116,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ── Hero Background Slideshow ────────────────────────────
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const heroImages = [
+      'images/banners/shutterstock_44761867.jpg',   // courtroom
+      'images/banners/highway_night.jpg',            // aerial highway night
+      'images/banners/shutterstock_1499306735.jpg',  // smart city
+      'images/banners/shutterstock_1335730841.jpg',  // circuit board
+    ];
+
+    // Create slide divs and insert before hero content
+    const slideEls = heroImages.map((src, i) => {
+      const div = document.createElement('div');
+      div.className = 'hero-slide' + (i === 0 ? ' active' : '');
+      div.style.backgroundImage = `url('${src}')`;
+      hero.insertBefore(div, hero.firstChild);
+      return div;
+    });
+
+    let current = 0;
+    setInterval(() => {
+      slideEls[current].classList.remove('active');
+      current = (current + 1) % slideEls.length;
+      slideEls[current].classList.add('active');
+    }, 5000);
+  }
+
   // ── Smooth Scroll ────────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
