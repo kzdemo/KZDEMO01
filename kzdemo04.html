@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Koning Zollar LLP — Strategic. Experienced. Focused.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,600;1,9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --white: #FFFFFF;
+    --black: #111111;
+    --green: #1B4332;
+    --green-light: rgba(27,67,50,0.08);
+    --off-white: #F7F6F3;
+    --gray-light: #E8E6E1;
+    --gray-mid: #888;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    color: var(--black);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(20px, 5vw, 64px);
+  }
+
+  .nav-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .nav-monogram {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--green);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .nav-firm {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--black);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .nav-firm span {
+    display: block;
+    font-weight: 300;
+    font-size: 0.72rem;
+    color: var(--gray-mid);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    background: var(--green);
+    color: var(--white) !important;
+    padding: 9px 20px;
+    border-radius: 2px;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: #143626 !important; color: var(--white) !important; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--black);
+    transition: all 0.3s;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+    padding: 24px clamp(20px, 5vw, 64px);
+    z-index: 99;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(80px, 12vh, 160px) clamp(20px, 5vw, 64px);
+    background-image: url('kzllp-website/images/banners/highway_night.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.62);
+    z-index: 1;
+  }
+
+  .hero-bg-monogram {
+    position: absolute;
+    right: -2%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(320px, 40vw, 600px);
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+    z-index: 2;
+  }
+
+  .hero-rule {
+    position: absolute;
+    top: 0;
+    left: clamp(20px, 5vw, 64px);
+    right: clamp(20px, 5vw, 64px);
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    z-index: 2;
+  }
+
+  .hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #86efac;
+    margin-bottom: 36px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: #86efac;
+  }
+
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(62px, 9vw, 140px);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    font-weight: 300;
+    margin-bottom: 48px;
+    max-width: 900px;
+  }
+
+  .hero-headline .line-1 { font-weight: 300; color: #fff; }
+  .hero-headline .line-2 { font-weight: 700; color: #fff; }
+  .hero-headline .line-3 { font-weight: 300; font-style: italic; color: #86efac; }
+
+  .hero-body {
+    max-width: 520px;
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.80);
+    margin-bottom: 48px;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: 2px;
+    transition: background 0.25s, transform 0.25s;
+  }
+
+  .btn-primary:hover { background: #143626; transform: translateY(-1px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: gap 0.2s;
+  }
+
+  .btn-ghost:hover { gap: 16px; }
+
+  .btn-ghost::after {
+    content: '→';
+    font-size: 1rem;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--green);
+    padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 64px);
+  }
+
+  .about-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .about-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: rgba(255,255,255,0.4);
+  }
+
+  .about-pull {
+    font-family: var(--serif);
+    font-size: clamp(32px, 3.8vw, 56px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+
+  .about-pull em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .about-body {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .about-body p + p { margin-top: 20px; }
+
+  .about-detail {
+    margin-top: 36px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+  }
+
+  /* ── PRACTICE AREAS ── */
+  .practice {
+    background: var(--white);
+    padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 64px);
+  }
+
+  .section-header {
+    max-width: 1400px;
+    margin: 0 auto 64px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--green);
+  }
+
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--black);
+  }
+
+  .practice-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid var(--gray-light);
+  }
+
+  .practice-item {
+    padding: 48px 48px 48px 0;
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .practice-item:nth-child(odd) {
+    padding-right: 64px;
+    border-right: 1px solid var(--gray-light);
+  }
+
+  .practice-item:nth-child(even) {
+    padding-left: 64px;
+    padding-right: 0;
+  }
+
+  .practice-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--green);
+    transition: width 0.4s ease;
+  }
+
+  .practice-item:hover::after { width: 100%; }
+
+  .practice-num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--green);
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -0.04em;
+  }
+
+  .practice-name {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.2vw, 30px);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 14px;
+    line-height: 1.15;
+  }
+
+  .practice-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #666;
+  }
+
+  /* ── STATS ── */
+  .stats {
+    background: var(--black);
+    padding: clamp(80px, 10vh, 120px) clamp(20px, 5vw, 64px);
+  }
+
+  .stats-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 40px 20px;
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .stat-item:first-child { border-left: none; }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: clamp(52px, 6vw, 88px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 12px;
+  }
+
+  .stat-num span {
+    color: var(--green);
+    font-weight: 300;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── TEAM ── */
+  .team {
+    background: var(--white);
+    padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 64px);
+  }
+
+  .team-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .team-card {
+    position: relative;
+  }
+
+  .team-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    background: var(--gray-light);
+    margin-bottom: 20px;
+    filter: grayscale(20%);
+    transition: filter 0.3s;
+  }
+
+  .team-card:hover .team-photo { filter: grayscale(0); }
+
+  .team-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team-photo-placeholder::before {
+    content: attr(data-initials);
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--green);
+    opacity: 0.4;
+  }
+
+  .team-name {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .team-title {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: var(--off-white);
+    padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 64px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .testimonials-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .testimonial-quote-mark {
+    font-family: var(--serif);
+    font-size: 8rem;
+    color: var(--green);
+    opacity: 0.12;
+    line-height: 0.6;
+    display: block;
+    margin-bottom: 20px;
+    user-select: none;
+  }
+
+  .testimonial-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.8vw, 38px);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--black);
+    margin-bottom: 36px;
+    min-height: 2.8em;
+    transition: opacity 0.4s;
+  }
+
+  .testimonial-attr {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--green);
+    transition: opacity 0.4s;
+  }
+
+  .testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+  }
+
+  .testimonial-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    border: none;
+  }
+
+  .testimonial-dot.active {
+    background: var(--green);
+    transform: scale(1.3);
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: var(--green);
+    padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 64px);
+  }
+
+  .contact-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .contact-info .about-label { margin-bottom: 24px; }
+
+  .contact-title {
+    font-family: var(--serif);
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 40px;
+  }
+
+  .contact-offices {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .contact-office-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .contact-office-addr {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .contact-email {
+    margin-top: 32px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.7;
+  }
+
+  .contact-email a {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .contact-form {
+    background: var(--white);
+    padding: 48px;
+    border-radius: 2px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--gray-light);
+    border-radius: 2px;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--black);
+    background: var(--white);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    outline: none;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(27,67,50,0.08);
+  }
+
+  .form-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-submit {
+    width: 100%;
+    background: var(--green);
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.25s, transform 0.2s;
+  }
+
+  .form-submit:hover { background: #143626; transform: translateY(-1px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 52px clamp(20px, 5vw, 64px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--green);
+    letter-spacing: -0.02em;
+  }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .about-inner { grid-template-columns: 1fr; gap: 48px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 56px; }
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .practice-grid { grid-template-columns: 1fr; }
+    .practice-item { padding: 40px 0 !important; border-right: none !important; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form { padding: 32px 24px; }
+    .section-header { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 480px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .stats-inner { grid-template-columns: 1fr 1fr; }
+    .stat-item { padding: 28px 10px; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .footer-links { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-monogram">KZ</div>
+      <div class="nav-firm">
+        Koning Zollar LLP
+        <span>Attorneys at Law</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#practice">Practice Areas</a></li>
+      <li><a href="#team">Attorneys</a></li>
+      <li><a href="#testimonials">Clients</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#practice" onclick="closeMobileMenu()">Practice Areas</a>
+  <a href="#team" onclick="closeMobileMenu()">Attorneys</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">Clients</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-rule"></div>
+  <div class="hero-bg-monogram" aria-hidden="true">KZ</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">California &amp; Connecticut</div>
+    <h1 class="hero-headline reveal reveal-delay-1">
+      <span class="line-1">Strategic.</span><br>
+      <span class="line-2">Experienced.</span><br>
+      <span class="line-3">Focused.</span>
+    </h1>
+    <p class="hero-body reveal reveal-delay-2">
+      A litigation boutique focused on complex commercial, employment, and intellectual property disputes. Founded by seasoned attorneys from top international law firms.
+    </p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="#practice" class="btn-primary">Our Practice</a>
+      <a href="#team" class="btn-ghost">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="reveal">
+      <div class="about-label">About the Firm</div>
+      <h2 class="about-pull">
+        Founded by seasoned attorneys<br>
+        who know how to <em>win.</em>
+      </h2>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="about-body">
+        <p>Koning Zollar LLP is a litigation boutique built on a single principle: every client deserves the caliber of representation typically reserved for the largest corporations.</p>
+        <p>Our founding partners bring decades of experience from top international law firms and bring that expertise to bear for clients of every size — from emerging companies to Fortune 500 organizations.</p>
+        <p>We operate with the focus of a boutique and the firepower of a major firm. When outcomes matter, our clients trust us.</p>
+      </div>
+      <div class="about-detail">
+        California &nbsp;·&nbsp; Connecticut &nbsp;·&nbsp; kzllp.com
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section class="practice" id="practice">
+  <div class="section-header">
+    <div>
+      <div class="section-label reveal">What We Do</div>
+      <h2 class="section-title reveal reveal-delay-1">Practice Areas</h2>
+    </div>
+  </div>
+  <div class="practice-grid">
+
+    <div class="practice-item reveal">
+      <div class="practice-num">01</div>
+      <div class="practice-name">Business Litigation</div>
+      <div class="practice-desc">Deep experience across complex commercial matters. We represent Fortune 500 companies and emerging businesses with equal dedication and precision.</div>
+    </div>
+
+    <div class="practice-item reveal reveal-delay-1">
+      <div class="practice-num">02</div>
+      <div class="practice-name">Employment</div>
+      <div class="practice-desc">Fierce advocacy across the full spectrum of employment litigation and counseling. From wage and hour to discrimination to executive disputes.</div>
+    </div>
+
+    <div class="practice-item reveal">
+      <div class="practice-num">03</div>
+      <div class="practice-name">Intellectual Property</div>
+      <div class="practice-desc">Patent, trademark, trade secrets, and copyright enforcement and protection. We guard what your company has built.</div>
+    </div>
+
+    <div class="practice-item reveal reveal-delay-1">
+      <div class="practice-num">04</div>
+      <div class="practice-name">Internal Investigations</div>
+      <div class="practice-desc">Discreet investigation of professional impropriety — from accounting fraud to executive misconduct. Thorough, confidential, and resolved.</div>
+    </div>
+
+    <div class="practice-item reveal" style="border-bottom: none;">
+      <div class="practice-num">05</div>
+      <div class="practice-name">Shareholder Disputes</div>
+      <div class="practice-desc">Complex and challenging securities and shareholder matters. We navigate the most contentious boardroom and investor disputes.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-num">20<span>+</span></div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-num">500<span>+</span></div>
+      <div class="stat-label">Matters Handled</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Office Locations</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Practice Areas</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-header">
+    <div>
+      <div class="section-label reveal">The Firm</div>
+      <h2 class="section-title reveal reveal-delay-1">Our Attorneys</h2>
+    </div>
+  </div>
+  <div class="team-grid">
+
+    <div class="team-card reveal">
+      <img src="images/dennis.png" alt="Dennis Koning" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="DK" style="display:none"></div>
+      <div class="team-name">Dennis Koning</div>
+      <div class="team-title">Founding Partner</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-1">
+      <img src="images/blake.png" alt="Blake Zollar" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="BZ" style="display:none"></div>
+      <div class="team-name">Blake Zollar</div>
+      <div class="team-title">Founding Partner</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-2">
+      <img src="images/drew.png" alt="Drew Natvig" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="DN" style="display:none"></div>
+      <div class="team-name">Drew Natvig</div>
+      <div class="team-title">Partner</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-3">
+      <img src="images/erik.png" alt="Erik Milch" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="EM" style="display:none"></div>
+      <div class="team-name">Erik Milch</div>
+      <div class="team-title">Partner</div>
+    </div>
+
+    <div class="team-card reveal">
+      <img src="images/natalie.png" alt="Natalie Prescott" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="NP" style="display:none"></div>
+      <div class="team-name">Natalie Prescott</div>
+      <div class="team-title">Associate</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-1">
+      <img src="images/neal.png" alt="Neal Rooney" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="NR" style="display:none"></div>
+      <div class="team-name">Neal Rooney</div>
+      <div class="team-title">Associate</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-2">
+      <img src="images/brisa.png" alt="Brisa Alfaro" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="BA" style="display:none"></div>
+      <div class="team-name">Brisa Alfaro</div>
+      <div class="team-title">Associate</div>
+    </div>
+
+    <div class="team-card reveal reveal-delay-3">
+      <img src="images/shaun.png" alt="Shaun Paisley" class="team-photo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="team-photo-placeholder" data-initials="SP" style="display:none"></div>
+      <div class="team-name">Shaun Paisley</div>
+      <div class="team-title">Partner, New Haven</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <span class="testimonial-quote-mark" aria-hidden="true">"</span>
+    <div class="testimonial-text" id="testimonial-text" role="blockquote"></div>
+    <div class="testimonial-attr" id="testimonial-attr"></div>
+    <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonials"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="about-label reveal" style="color:rgba(255,255,255,0.5)">Get in Touch</div>
+      <h2 class="contact-title reveal reveal-delay-1">Let's talk<br><em>about your case.</em></h2>
+      <div class="contact-offices reveal reveal-delay-2">
+        <div>
+          <div class="contact-office-name">San Diego</div>
+          <div class="contact-office-addr">501 W Broadway, Suite 800<br>San Diego, CA 92101</div>
+        </div>
+        <div>
+          <div class="contact-office-name">New Haven</div>
+          <div class="contact-office-addr">265 Church Street, Suite 802<br>New Haven, CT 06510</div>
+        </div>
+      </div>
+      <div class="contact-email reveal reveal-delay-3">
+        <a href="mailto:info@kzllp.com">info@kzllp.com</a>
+      </div>
+    </div>
+    <div class="contact-form reveal reveal-delay-2">
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">First Name</label>
+            <input type="text" id="fname" class="form-input" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lname">Last Name</label>
+            <input type="text" id="lname" class="form-input" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="matter">Matter Type</label>
+          <select id="matter" class="form-select">
+            <option value="">Select a practice area...</option>
+            <option>Business Litigation</option>
+            <option>Employment</option>
+            <option>Intellectual Property</option>
+            <option>Internal Investigations</option>
+            <option>Shareholder Disputes</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Brief Description</label>
+          <textarea id="message" class="form-textarea" placeholder="Please share a brief description of your legal matter..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">KZ</div>
+    <div class="footer-copy">
+      © 2024 Koning Zollar LLP. All rights reserved.<br>
+      Attorney advertising. Prior results do not guarantee a similar outcome.
+    </div>
+    <ul class="footer-links">
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#team">Attorneys</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:info@kzllp.com">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  // ── MOBILE MENU ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', open);
+    const spans = hamburger.querySelectorAll('span');
+    if (open) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    }
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
+
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  // ── SCROLL REVEAL ──
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // Make hero elements visible immediately
+  document.querySelectorAll('.hero .reveal').forEach(el => {
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+
+  // ── TESTIMONIALS ──
+  const testimonials = [
+    {
+      text: "A powerful combination of both legal and technical acumen.",
+      attr: "Lauren Segal — General Counsel, Phoenix Technologies"
+    },
+    {
+      text: "Reliable, efficient, and effective. My first choice for litigation.",
+      attr: "Francisco Velasco — General Counsel, PriceSmart"
+    }
+  ];
+
+  let currentTestimonial = 0;
+  let testimonialTimer;
+  const textEl = document.getElementById('testimonial-text');
+  const attrEl = document.getElementById('testimonial-attr');
+  const dotsEl = document.getElementById('testimonial-dots');
+
+  function renderDots() {
+    dotsEl.innerHTML = '';
+    testimonials.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'testimonial-dot' + (i === currentTestimonial ? ' active' : '');
+      dot.setAttribute('aria-label', 'Testimonial ' + (i + 1));
+      dot.setAttribute('role', 'tab');
+      dot.addEventListener('click', () => goToTestimonial(i));
+      dotsEl.appendChild(dot);
+    });
+  }
+
+  function goToTestimonial(index) {
+    textEl.style.opacity = '0';
+    attrEl.style.opacity = '0';
+    setTimeout(() => {
+      currentTestimonial = index;
+      textEl.textContent = '"' + testimonials[index].text + '"';
+      attrEl.textContent = testimonials[index].attr;
+      textEl.style.opacity = '1';
+      attrEl.style.opacity = '1';
+      renderDots();
+    }, 300);
+    clearInterval(testimonialTimer);
+    testimonialTimer = setInterval(nextTestimonial, 6000);
+  }
+
+  function nextTestimonial() {
+    goToTestimonial((currentTestimonial + 1) % testimonials.length);
+  }
+
+  // Init
+  textEl.textContent = '"' + testimonials[0].text + '"';
+  attrEl.textContent = testimonials[0].attr;
+  renderDots();
+  testimonialTimer = setInterval(nextTestimonial, 6000);
+
+  // ── FORM ──
+  function handleFormSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#143626';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Send Message →';
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 3500);
+  }
+</script>
+</body>
+</html>
